@@ -1,0 +1,35 @@
+.home-container {
+	display: flex;
+	justify-content: center;
+}
+
+.welcome-message {
+	position: relative;
+	top: 35vh;
+	font-size: 50px;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	animation-name: welcome;
+	animation-duration: 2s;
+}
+
+@keyframes welcome {
+	0% {
+		opacity: 0;
+		font-size: 50px;
+	}
+	50% {
+		opacity: 1;
+		font-size: 50px;
+	}
+	75% {
+		opacity: 1;
+		font-size: 50px;
+	}
+	100% {
+		font-size: 0px;
+	}
+}
