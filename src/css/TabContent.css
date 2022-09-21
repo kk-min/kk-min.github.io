@@ -1,11 +1,30 @@
 .content-container {
 	display: flex;
 	margin-top: 30vh;
-	animation-name: content-pop;
+}
+
+.content-initial {
+	animation-name: content-pop-initial;
 	animation-duration: 3s;
 }
 
+.content {
+	animation-name: content-pop;
+	animation-duration: 0.5s;
+}
+
 @keyframes content-pop {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes content-pop-initial {
 	0% {
 		opacity: 0;
 		transform: scale(0);

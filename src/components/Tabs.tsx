@@ -15,7 +15,6 @@ export default function Tabs() {
 				setActiveTab={setActiveTab}
 			/>
 			<TabContent
-				data={[]}
 				loading={false}
 				error={false}
 				activeTab={activeTab}
