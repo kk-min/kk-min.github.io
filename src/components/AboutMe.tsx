@@ -10,9 +10,12 @@ export default function AboutMe(props: PropTypes) {
 			id='about-me'
 			className={props.firstRender ? 'empty-content' : 'content'}
 		>
-			<div>
-				<h1>Hi there! I'm Min.</h1>
-				<p></p>
+			<div className='intro-container'>
+				<h1>
+					<p className='blue-text'>Hi there! I'm </p>
+					<p className='orange-text'>Min.</p>
+				</h1>
+				<button className='down-button'>V</button>
 			</div>
 		</div>
 	);

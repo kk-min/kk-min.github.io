@@ -1,6 +1,18 @@
+:root {
+	--main-bg-color: #edfaff;
+	--secondary-bg-color: #edfaff;
+	--tab-highlight-color: #007ef1;
+	--font-highlight-color: #f17300;
+	--tab-title-color: #203b69;
+	--product-title-color: #201c49;
+	--secondary-font-color: #919191;
+}
+
 .home-container {
 	display: flex;
 	justify-content: center;
+	background: var(--main-bg-color);
+	height: 100vh;
 }
 
 .welcome-message {
@@ -21,6 +33,7 @@
 	0% {
 		opacity: 0;
 		font-size: 50px;
+		color: var(--tab-highlight-color);
 	}
 	50% {
 		opacity: 1;
@@ -29,8 +42,10 @@
 	75% {
 		opacity: 1;
 		font-size: 50px;
+		color: var(--font-highlight-color);
 	}
 	100% {
 		font-size: 0px;
+		color: var(--font-highlight-color);
 	}
 }

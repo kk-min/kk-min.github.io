@@ -1,6 +1,17 @@
+:root {
+	--main-bg-color: #ffffff;
+	--secondary-bg-color: #fff9f0;
+	--tab-highlight-color: #007ef1;
+	--font-highlight-color: #f17300;
+	--tab-title-color: #203b69;
+	--product-title-color: #201c49;
+	--secondary-font-color: #919191;
+}
+
 .content-container {
-	display: flex;
+	flex-grow: 1;
 	margin-top: 30vh;
+	background: var(--main-bg-color);
 }
 
 .content {
@@ -10,6 +21,14 @@
 
 .empty-content {
 	opacity: 0;
+}
+
+.blue-text {
+	color: var(--tab-highlight-color);
+}
+
+.orange-text {
+	color: var(--font-highlight-color);
 }
 
 @keyframes content-pop {
