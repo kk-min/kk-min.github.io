@@ -1,4 +1,4 @@
-import React, { Dispatch } from 'react';
+import React, { Dispatch, useEffect, useState } from 'react';
 import '../css/TabContent.css';
 import AboutMe from './AboutMe';
 import Contact from './Contact';
@@ -12,10 +12,17 @@ export interface PropTypes {
 }
 
 export default function TabContent(props: PropTypes) {
+	const [firstRender, setFirstRender] = useState(true);
+	useEffect(() => {
+		setTimeout(() => {
+			setFirstRender((prev) => false);
+		}, 2500);
+	}, []);
+
 	return (
 		<div className='content-container' id='content-container'>
 			{props.activeTab == 'About Me' ? (
-				<AboutMe />
+				<AboutMe firstRender={firstRender} />
 			) : props.activeTab == 'Projects' ? (
 				<Projects />
 			) : (
