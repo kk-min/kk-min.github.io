@@ -14,6 +14,7 @@
 	margin-bottom: 20px;
 	animation-name: welcome;
 	animation-duration: 2s;
+	animation-fill-mode: forwards;
 }
 
 @keyframes welcome {

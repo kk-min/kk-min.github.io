@@ -1,0 +1,111 @@
+:root {
+	--main-bg-color: #ffffff;
+	--secondary-bg-color: #f3f3fc;
+	--tab-highlight-color: #448aff;
+	--font-highlight-color: #3064cc;
+	--tab-title-color: #203b69;
+	--product-title-color: #201c49;
+	--secondary-font-color: #919191;
+}
+
+.tabs {
+	display: flex;
+	justify-content: flex-start;
+	max-height: 10vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.tabsfiller {
+	display: flex;
+	justify-content: flex-end;
+	flex-grow: 1;
+	align-items: center;
+	border-bottom: 1px solid var(--secondary-font-color);
+	background-color: var(--secondary-bg-color);
+}
+
+.tabslogo {
+	height: 40%;
+	max-width: 200px;
+	object-fit: contain;
+	margin-right: 20px;
+}
+
+.tabheader {
+	color: var(--secondary-font-color);
+	background-color: var(--main-bg-color);
+	border-top: 0;
+	border-left: 0;
+	border-right: 1px solid var(--secondary-font-color);
+	border-bottom: 1px solid var(--secondary-font-color);
+	min-height: 8vh;
+	cursor: pointer;
+	padding: 15px 30px 15px 30px;
+}
+
+.tabheader:hover {
+	color: var(--font-highlight-color);
+}
+
+.tabheaderactive {
+	color: var(--font-highlight-color);
+	font-weight: bold;
+	background-color: var(--main-bg-color);
+	border-top: 5px solid var(--tab-highlight-color);
+	border-left: 0;
+	border-right: 1px solid var(--secondary-font-color);
+	border-bottom: 0;
+	min-height: 8vh;
+	cursor: pointer;
+	padding: 15px 30px 15px 30px;
+}
+
+.tabbody {
+	align-items: center;
+}
+
+@media (max-width: 1279px) {
+}
+
+@media (max-width: 724px) {
+	.tabheader {
+		font-size: 10px;
+	}
+	.tabheaderactive {
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 562px) {
+	.tabheader {
+		font-size: 10px;
+		padding: 1px 5px 1px 5px;
+	}
+	.tabheaderactive {
+		font-size: 10px;
+		padding: 1px 5px 1px 5px;
+	}
+	.tabsfiller {
+		justify-content: center;
+	}
+}
+
+@media (max-width: 360px) {
+	.tabheader {
+		font-size: 10px;
+		padding: 1px 5px 1px 5px;
+	}
+	.tabheaderactive {
+		font-size: 10px;
+		padding: 1px 5px 1px 5px;
+	}
+	.tabsfiller {
+		justify-content: left;
+	}
+	.tabslogo {
+		margin-left: 5vh;
+	}
+}
