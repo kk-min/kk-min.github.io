@@ -16,6 +16,20 @@
 	top: 0;
 	left: 0;
 	right: 0;
+	animation-name: tabslide;
+	animation-duration: 2.5s;
+}
+
+@keyframes tabslide {
+	0% {
+		top: -10vh;
+	}
+	75% {
+		top: -10vh;
+	}
+	100% {
+		top: 0;
+	}
 }
 
 .tabsfiller {

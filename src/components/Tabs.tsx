@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { TabHeaders } from './TabHeaders';
 import TabContent from './TabContent';
+import TabHeaders from './TabHeaders';
 
-const tab_names = ['CCAFS SLC 40', 'VAFB SLC 4E', 'KSC LC 39A'];
+const tab_names = ['About Me', 'Projects', 'Contact'];
 
 export default function Tabs() {
 	const [activeTab, setActiveTab] = useState(tab_names[0]);

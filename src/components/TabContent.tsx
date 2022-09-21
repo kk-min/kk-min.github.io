@@ -1,4 +1,5 @@
 import React, { Dispatch } from 'react';
+import '../css/TabContent.css';
 
 export interface PropTypes {
 	data: any[];
@@ -10,7 +11,7 @@ export interface PropTypes {
 
 export default function TabContent(props: PropTypes) {
 	return (
-		<div>
+		<div className='content-container' id='content-container'>
 			<h1>Tab Content</h1>
 		</div>
 	);

@@ -1,6 +1,5 @@
 import React, { SetStateAction, useEffect, useState } from 'react';
 import '../css/Tabs.css';
-import trustana_header from '../assets/trustana_header.png';
 
 export interface PropTypes {
 	tabNames: string[];
@@ -8,7 +7,7 @@ export interface PropTypes {
 	setActiveTab: React.Dispatch<SetStateAction<string>>;
 }
 
-export function TabHeaders(props: PropTypes) {
+export default function TabHeaders(props: PropTypes) {
 	const [tabNames, setTabNames] = useState<string[]>([]);
 
 	// Initialization:
@@ -52,7 +51,7 @@ export function TabHeaders(props: PropTypes) {
 				</button>
 			))}
 			<div className='tabsfiller'>
-				<img className='tabslogo' src={trustana_header} />
+				<img className='tabslogo' src={''} />
 			</div>
 		</div>
 	);
