@@ -13,6 +13,7 @@
 	justify-content: center;
 	background: var(--main-bg-color);
 	height: 100vh;
+	width: 100%;
 }
 
 .welcome-message {

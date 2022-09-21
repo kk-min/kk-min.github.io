@@ -8,7 +8,7 @@ export default function Tabs() {
 	const [activeTab, setActiveTab] = useState(tab_names[0]);
 
 	return (
-		<div>
+		<div className='tabs-container'>
 			<TabHeaders
 				tabNames={tab_names.map((site_name) => site_name)}
 				activeTab={activeTab}

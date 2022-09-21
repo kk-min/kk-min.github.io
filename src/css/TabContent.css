@@ -13,8 +13,12 @@
 	margin-top: 30vh;
 	background: var(--main-bg-color);
 }
+.intro-container {
+	display: block;
+}
 
 .content {
+	display: block;
 	animation-name: content-pop;
 	animation-duration: 0.5s;
 }
