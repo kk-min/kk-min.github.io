@@ -10,11 +10,20 @@
 
 .content-container {
 	flex-grow: 1;
-	margin-top: 30vh;
+	margin: 20vh 0 0 10vh;
 	background: var(--main-bg-color);
 }
 .intro-container {
 	display: block;
+}
+
+.down-button {
+	border-radius: 10px;
+
+	background-color: var(--tab-highlight-color);
+	border-color: var(--font-highlight-color);
+	box-shadow: none;
+	color: var(--font-highlight-color);
 }
 
 .content {
