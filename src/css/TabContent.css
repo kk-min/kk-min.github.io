@@ -10,11 +10,19 @@
 
 .content-container {
 	flex-grow: 1;
-	margin: 20vh 0 0 10vh;
+	margin: 20vh 0 0 0;
 	background: var(--main-bg-color);
 }
 .intro-container {
 	display: block;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.intro-text {
+	width: 100vw;
+	align-self: center;
 }
 
 .arrow {
@@ -28,13 +36,13 @@
 	border-color: var(--font-highlight-color);
 	box-shadow: none;
 	color: var(--font-highlight-color);
+	animation-name: arrow-bounce;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
 }
 
 .down-button:hover {
 	cursor: pointer;
-	animation-name: arrow-bounce;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
 }
 
 @keyframes arrow-bounce {
@@ -50,7 +58,8 @@
 }
 
 .content {
-	display: block;
+	display: flex;
+	flex-direction: column;
 	animation-name: content-pop;
 	animation-duration: 0.5s;
 }

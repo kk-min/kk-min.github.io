@@ -11,7 +11,7 @@ export default function AboutMe(props: PropTypes) {
 			className={props.firstRender ? 'empty-content' : 'content'}
 		>
 			<div className='intro-container'>
-				<h1>
+				<h1 className='intro-text'>
 					<p className='blue-text'>Hi there! I'm </p>
 					<p className='orange-text'>Min.</p>
 				</h1>
