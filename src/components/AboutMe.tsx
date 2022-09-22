@@ -15,7 +15,9 @@ export default function AboutMe(props: PropTypes) {
 					<p className='blue-text'>Hi there! I'm </p>
 					<p className='orange-text'>Min.</p>
 				</h1>
-				<button className='down-button'>V</button>
+				<button className='down-button'>
+					<b className='arrow'>🡳</b>
+				</button>
 			</div>
 		</div>
 	);

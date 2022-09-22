@@ -17,13 +17,36 @@
 	display: block;
 }
 
+.arrow {
+	color: var(--tab-highlight-color);
+	font-size: 50px;
+}
+
 .down-button {
-	border-radius: 10px;
-	border-style: solid;
-	background-color: var(--tab-highlight-color);
+	border: 0;
+	background-color: var(--secondary-bg-color);
 	border-color: var(--font-highlight-color);
 	box-shadow: none;
 	color: var(--font-highlight-color);
+}
+
+.down-button:hover {
+	cursor: pointer;
+	animation-name: arrow-bounce;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes arrow-bounce {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 .content {
