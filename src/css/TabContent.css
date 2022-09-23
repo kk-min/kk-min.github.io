@@ -21,8 +21,9 @@
 }
 
 .intro-text {
-	width: 100vw;
+	width: 100%;
 	align-self: center;
+	text-align: center;
 }
 
 .arrow {
@@ -74,6 +75,42 @@
 
 .orange-text {
 	color: var(--font-highlight-color);
+}
+
+.wave-emoji {
+	display: inline-block;
+	cursor: default;
+	padding: 2px;
+}
+
+.wave-emoji:hover {
+	animation: wave 0.5s;
+}
+
+@keyframes wave {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(15deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(15deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.about-me-content {
+	margin: 10vh;
+	font-size: 1.5rem;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100vh;
 }
 
 @keyframes content-pop {
