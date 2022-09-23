@@ -1,5 +1,6 @@
 import React, { SetStateAction, useEffect, useState } from 'react';
 import '../css/Tabs.css';
+import kkminlogo_light from '../assets/kkminlogo_light.png';
 
 export interface PropTypes {
     tabNames: string[];
@@ -51,7 +52,7 @@ export default function TabHeaders(props: PropTypes) {
                 </button>
             ))}
             <div className='tabsfiller'>
-                <img className='tabslogo' src={''} />
+                <img className='tabslogo' src={kkminlogo_light} />
             </div>
         </div>
     );
