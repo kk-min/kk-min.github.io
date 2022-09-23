@@ -6,10 +6,15 @@ export interface PropTypes {
 
 export default function AboutMe(props: PropTypes) {
 	const scrollHandler = () => {
-		// scroll down the window smoothly until the top of the element is at the top of the window:
-		const element = document.getElementById('about-me-content');
-		if (element) {
-			element.scrollIntoView({ behavior: 'smooth' });
+		// scroll down the window smoothly until the top of the element is in the middle of the window:
+		const viewPortOffSet = document
+			.getElementById('about-me-content')
+			?.getBoundingClientRect();
+		if (viewPortOffSet) {
+			window.scrollTo({
+				top: viewPortOffSet.top * 0.85 + window.scrollY,
+				behavior: 'smooth',
+			});
 		}
 	};
 
