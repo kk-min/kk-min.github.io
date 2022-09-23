@@ -139,9 +139,73 @@
     color: var(--tab-highlight-color);
 }
 
+.project-category {
+    font-size: 2.5rem;
+    margin-left: 10vh;
+    width: fit-content;
+    color: var(--font-highlight-color);
+}
+
 .github-logo {
     height: 50px;
     width: 50px;
     object-fit: contain;
     margin: 0 10px;
+}
+
+.card-container {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.item-card {
+    border: 1px solid var(--secondary-font-color);
+    border-radius: 5px;
+    margin: 5vh;
+    text-align: left;
+    transition: 0.2s;
+    box-shadow: 4px 4px 5px var(--secondary-bg-color);
+}
+
+.item-card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card-image {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    max-width: 200px;
+    padding-left: 10%;
+    color: var(--font-highlight-color);
+    overflow: hidden;
+}
+
+.card-description {
+    padding-left: 10%;
+    color: var(--secondary-font-color);
+}
+
+.card-footer {
+    padding-left: 10%;
+    color: var(--tab-highlight-color);
 }
