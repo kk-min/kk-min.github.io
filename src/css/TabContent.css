@@ -123,3 +123,8 @@
 		transform: scale(1);
 	}
 }
+
+.tab-title {
+	margin-left: 10vh;
+	color: var(--tab-highlight-color);
+}
