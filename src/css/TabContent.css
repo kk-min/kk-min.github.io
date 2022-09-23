@@ -1,130 +1,147 @@
 :root {
-	--main-bg-color: #ffffff;
-	--secondary-bg-color: #fff9f0;
-	--tab-highlight-color: #007ef1;
-	--font-highlight-color: #f17300;
-	--tab-title-color: #203b69;
-	--product-title-color: #201c49;
-	--secondary-font-color: #919191;
+    --main-bg-color: #ffffff;
+    --secondary-bg-color: #fff9f0;
+    --tab-highlight-color: #007ef1;
+    --font-highlight-color: #f17300;
+    --tab-title-color: #203b69;
+    --product-title-color: #201c49;
+    --secondary-font-color: #919191;
 }
 
 .content-container {
-	flex-grow: 1;
-	margin: 20vh 0 0 0;
-	background: var(--main-bg-color);
+    flex-grow: 1;
+    margin: 20vh 0 0 0;
+    background: var(--main-bg-color);
 }
 .intro-container {
-	display: block;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+    display: block;
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .intro-text {
-	width: 100%;
-	align-self: center;
-	text-align: center;
+    width: 100%;
+    align-self: center;
+    text-align: center;
 }
 
 .arrow {
-	color: var(--tab-highlight-color);
-	font-size: 50px;
+    color: var(--tab-highlight-color);
+    font-size: 50px;
 }
 
 .down-button {
-	border: 0;
-	background-color: var(--secondary-bg-color);
-	border-color: var(--font-highlight-color);
-	box-shadow: none;
-	color: var(--font-highlight-color);
-	animation-name: arrow-bounce;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
+    border: 0;
+    background-color: var(--secondary-bg-color);
+    border-color: var(--font-highlight-color);
+    box-shadow: none;
+    color: var(--font-highlight-color);
+    animation-name: arrow-bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
 .down-button:hover {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 @keyframes arrow-bounce {
-	0% {
-		transform: translateY(0);
-	}
-	50% {
-		transform: translateY(-10px);
-	}
-	100% {
-		transform: translateY(0);
-	}
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .content {
-	display: flex;
-	flex-direction: column;
-	animation-name: content-pop;
-	animation-duration: 0.5s;
+    display: flex;
+    flex-direction: column;
+    animation-name: content-pop;
+    animation-duration: 0.5s;
 }
 
 .empty-content {
-	opacity: 0;
+    opacity: 0;
 }
 
 .blue-text {
-	color: var(--tab-highlight-color);
+    color: var(--tab-highlight-color);
 }
 
 .orange-text {
-	color: var(--font-highlight-color);
+    color: var(--font-highlight-color);
 }
 
 .wave-emoji {
-	display: inline-block;
-	cursor: default;
-	padding: 2px;
+    display: inline-block;
+    cursor: default;
+    padding: 2px;
 }
 
 .wave-emoji:hover {
-	animation: wave 0.5s;
+    animation: wave 0.5s;
 }
 
 @keyframes wave {
-	0% {
-		transform: rotate(0deg);
-	}
-	25% {
-		transform: rotate(15deg);
-	}
-	50% {
-		transform: rotate(0deg);
-	}
-	75% {
-		transform: rotate(15deg);
-	}
-	100% {
-		transform: rotate(0deg);
-	}
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .about-me-content {
-	margin: 10vh;
-	font-size: 1.5rem;
-	justify-content: center;
-	align-items: center;
-	margin-top: 100vh;
+    margin: 10vh;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100vh;
 }
 
 @keyframes content-pop {
-	0% {
-		opacity: 0;
-		transform: scale(0);
-	}
-	100% {
-		opacity: 1;
-		transform: scale(1);
-	}
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
 }
 
 .tab-title {
-	margin-left: 10vh;
-	color: var(--tab-highlight-color);
+    font-size: 3em;
+    margin-left: 10vh;
+    width: fit-content;
+    color: var(--tab-highlight-color);
+}
+
+.github-logo {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    margin: 0 10px;
 }
