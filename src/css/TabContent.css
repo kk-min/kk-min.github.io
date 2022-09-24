@@ -283,6 +283,20 @@
 	color: var(--secondary-font-color);
 	font-size: 0.8rem;
 	align-self: center;
+	animation-name: fade-in;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .project-title {
@@ -306,4 +320,38 @@ li:not(last-child) {
 
 li::marker {
 	color: var(--tab-highlight-color);
+}
+
+.lock-container {
+	display: flex;
+	margin-top: 10vh;
+	justify-content: center;
+}
+
+.lock {
+	width: 15vw;
+}
+
+.lock:hover {
+	cursor: pointer;
+}
+
+.shaking {
+	animation-name: shake;
+	animation-duration: 0.3s;
+}
+
+@keyframes shake {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(5deg);
+	}
+	50% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
 }
