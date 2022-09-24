@@ -23,7 +23,8 @@
 				"Developed a web application with React framework and Javascript to promote SGSAFETY Android mobile application",
 				"Led a team of 6 members through the software development process from planning to deployment",
 				"Managed project timeline with Agile framework, delegated tasks to team members for timely completion",
-				"Integrated live AED location map into website via SG government’s AED Locations API"
+				"Integrated cross-platform authentication via Firebase's Authentication service for both web and mobile",
+				"Integrated live AED location map into website via Singapore government’s AED Locations API"
 			]
 		},
 		{
@@ -49,6 +50,35 @@
 				"Developed a web application with React framework, Typescript and CSS",
 				"Designed and implemented tab-based content navigation",
 				"Designed reusable components from ground up using for easy integration into other projects"
+			]
+		}
+	],
+	"backend": [
+		{
+			"name": "SGSAFETY - Android Application",
+			"subheader": "Team Lead",
+			"description": "Android mobile application for broadcasting and receiving distress signals.",
+			"icon": "",
+			"link": "https://github.com/kk-min/sgsafety-mobile",
+			"bulletpoints": [
+				"Developed a native Android application in Kotlin with Firebase as remote database",
+				"Managed a team of 5 developers to ensure timely completion and delivery of project",
+				"Designed and implemented application architecture for easy reusability and integration with Firebase's Authentication service",
+				"Implemented live chat feature with Firebase's Firestore database"
+			]
+		}
+	],
+	"miscellaneous": [
+		{
+			"name": "Bluetooth Server Tester",
+			"subheader": "",
+			"description": "Python server-side application for testing client-side Bluetooth functionalities.",
+			"icon": "",
+			"link": "https://github.com/kk-min/bluetooth-server-tester",
+			"bulletpoints": [
+				"Developed a Python application with and PyBluez library for sending/receiving Bluetooth messages",
+				"Implemented multi-threading for concurrent send/receive operations",
+				"Designed and implemented bluetooth reconnection mechanism via polling and automatic connection reinitiation"
 			]
 		}
 	]
