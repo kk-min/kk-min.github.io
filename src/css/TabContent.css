@@ -271,3 +271,11 @@
 .no-link {
 	cursor: default;
 }
+
+li:not(last-child) {
+	margin-bottom: 1rem;
+}
+
+li::marker {
+	color: var(--tab-highlight-color);
+}

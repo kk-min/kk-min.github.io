@@ -5,21 +5,29 @@
 			"subheader": "Project Manager  / Team Lead",
 			"description": "Medical consultation web application for remote access to healthcare services with accessibility features for elderly.",
 			"icon": "",
-			"link": "https://github.com/kk-min/medico"
+			"link": "https://github.com/kk-min/medico",
+			"bulletpoints": [
+				"Developed a web application with React framework and Firebase as backend",
+				"Managed a team of 5 developers to ensure timely completion and delivery of project",
+				"Designed and implemented application architecture for easy reusability and integration with Firebase's Authentication service",
+				"Implemented live chat feature with Firebase's Firestore database"
+			]
 		},
 		{
 			"name": "SGSAFETY",
 			"subheader": "Team Lead",
 			"description": "Promotional website for SGSafety Android mobile application, a distress signal broadcaster and receiver.",
 			"icon": "",
-			"link": ""
+			"link": "",
+			"bulletpoints": []
 		},
 		{
 			"name": "Chat Application Web",
 			"subheader": "",
 			"description": "Online web application for chatting with Min... if you know the secret!",
 			"icon": "",
-			"link": ""
+			"link": "https://github.com/kk-min/chat-application-web",
+			"bulletpoints": []
 		}
 	]
 }

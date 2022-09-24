@@ -7,6 +7,7 @@ export interface PropTypes {
 	projectIcon: string;
 	projectRole: string;
 	projectLink: string;
+	projectBulletPoints: string[];
 }
 
 export default function ProjectItem(props: PropTypes) {
@@ -40,6 +41,11 @@ export default function ProjectItem(props: PropTypes) {
 			<div className='project-description'>
 				{props.projectDescription}
 			</div>
+			<ul>
+				{props.projectBulletPoints.map((point) => {
+					return <li>{point}</li>;
+				})}
+			</ul>
 		</div>
 	);
 }

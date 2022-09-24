@@ -73,14 +73,15 @@ export default function Projects() {
 						Frontend <img src={web} style={{ height: '6vh' }} />
 					</h1>
 				</div>
-				{project_data.frontend.map((project) => {
+				{project_data.frontend.map((data) => {
 					return (
 						<ProjectItem
-							projectTitle={project.name}
-							projectDescription={project.description}
-							projectIcon={project.icon}
-							projectRole={project.subheader}
-							projectLink={project.link}
+							projectTitle={data.name}
+							projectDescription={data.description}
+							projectIcon={data.icon}
+							projectRole={data.subheader}
+							projectLink={data.link}
+							projectBulletPoints={data.bulletpoints}
 						/>
 					);
 				})}
