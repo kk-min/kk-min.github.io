@@ -25,10 +25,6 @@ export default function Contact() {
 		setSecret((prev) => getRandomSecret(randomizerArray));
 	}, []);
 
-	useEffect(() => {
-		console.log(input);
-	}, [input]);
-
 	const addInput = (input: string) => {
 		setInput((prev) => prev + input);
 	};
@@ -36,7 +32,7 @@ export default function Contact() {
 	return (
 		<div className='content'>
 			<h1 className='tab-title'>Contact</h1>
-			<Lock />
+			<Lock secret={secret} input={input} />
 			<Unlocker secret={secret} addInput={addInput} />
 		</div>
 	);
