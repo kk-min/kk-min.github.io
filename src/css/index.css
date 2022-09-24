@@ -1,56 +1,67 @@
-@font-face {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: normal;
-    src: local('DM Sans'), url(../assets/DMSans-Regular.woff) format('woff');
+:root {
+	--main-bg-color: #ffffff;
+	--secondary-bg-color: #fff9f0;
+	--tab-highlight-color: #007ef1;
+	--font-highlight-color: #f17300;
+	--tab-title-color: #203b69;
+	--product-title-color: #201c49;
+	--secondary-font-color: #919191;
 }
 
 @font-face {
-    font-family: 'DM Sans';
-    font-style: italic;
-    font-weight: normal;
-    src: local('DM Sans'), url(../assets/DMSans-Italic.woff) format('woff');
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: normal;
+	src: local('DM Sans'), url(../assets/DMSans-Regular.woff) format('woff');
 }
 
 @font-face {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: bold;
-    src: local('DM Sans'), url(../assets/DMSans-Bold.woff) format('woff');
+	font-family: 'DM Sans';
+	font-style: italic;
+	font-weight: normal;
+	src: local('DM Sans'), url(../assets/DMSans-Italic.woff) format('woff');
 }
 
 @font-face {
-    font-family: 'DM Sans';
-    font-style: italic;
-    font-weight: bold;
-    src: local('DM Sans'), url(../assets/DMSans-BoldItalic.woff) format('woff');
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: bold;
+	src: local('DM Sans'), url(../assets/DMSans-Bold.woff) format('woff');
 }
 
 @font-face {
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: medium;
-    src: local('DM Sans'), url(../assets/DMSans-Medium.woff) format('woff');
+	font-family: 'DM Sans';
+	font-style: italic;
+	font-weight: bold;
+	src: local('DM Sans'), url(../assets/DMSans-BoldItalic.woff) format('woff');
 }
 
 @font-face {
-    font-family: 'DM Sans';
-    font-style: italic;
-    font-weight: medium;
-    src: local('DM Sans'),
-        url(../assets/DMSans-MediumItalic.woff) format('woff');
+	font-family: 'DM Sans';
+	font-style: normal;
+	font-weight: medium;
+	src: local('DM Sans'), url(../assets/DMSans-Medium.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'DM Sans';
+	font-style: italic;
+	font-weight: medium;
+	src: local('DM Sans'),
+		url(../assets/DMSans-MediumItalic.woff) format('woff');
 }
 
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+		'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+		'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: var(--main-bg-color);
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
