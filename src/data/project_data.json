@@ -63,8 +63,9 @@
 			"bulletpoints": [
 				"Developed a native Android application in Kotlin with Firebase as remote database",
 				"Managed a team of 5 developers to ensure timely completion and delivery of project",
-				"Designed and implemented application architecture for easy reusability and integration with Firebase's Authentication service",
-				"Implemented live chat feature with Firebase's Firestore database"
+				"Spearheaded application architecture design decisions",
+				"Implemented distress signal broadcasting via a distributed computation approach using Firebase Topic Messaging",
+				"Implemented live location trail and map view using OpenStreetMaps API"
 			]
 		}
 	],
