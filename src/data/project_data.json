@@ -81,6 +81,31 @@
 				"Assisted GUI Developer in live display of communication status and received data to GUI",
 				"Designed and implemented a 5-attempt Bluetooth reconnection mechanism for consistent and robust connection"
 			]
+		},
+		{
+			"name": "Chat Application Desktop",
+			"subheader": "",
+			"description": "Desktop Application for chat communication between two clients.",
+			"icon": "",
+			"link": "https://github.com/kk-min/chat-application-desktop",
+			"bulletpoints": [
+				"Developed a desktop application in Java and JavaFX",
+				"Implemented GUI using JavaFX and Model-View-Controller (MVC) framework",
+				"Integrated asnyhronous execution of I/O bound operations for concurrent send/receive operations using Java's CompletableFuture library"
+			]
+		},
+		{
+			"name": "Stock Exchange System",
+			"subheader": "",
+			"description": "Model of a stock exchange system with price-time order matching.",
+			"icon": "",
+			"link": "https://github.com/kk-min/stock-exchange-system",
+			"bulletpoints": [
+				"Developed a console application in Java",
+				"Implemented price-time order matching system",
+				"Implemented quote history tracking for different stocks",
+				"Adhered to best-practice design principles such as Single Responsibility Principle and Dependency Inversion Principle"
+			]
 		}
 	],
 	"miscellaneous": [

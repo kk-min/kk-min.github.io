@@ -65,6 +65,9 @@ export default function Projects() {
 						}
 					/>
 				</div>
+				<div className='project-footer'>
+					For a full resume/CV, please reach me via the Contact tab.
+				</div>
 			</div>
 		);
 	} else if (selection === 'frontend') {
