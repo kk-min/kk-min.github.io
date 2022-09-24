@@ -67,6 +67,20 @@
 				"Implemented distress signal broadcasting via a distributed computation approach using Firebase Topic Messaging",
 				"Implemented live location trail and map view using OpenStreetMaps API"
 			]
+		},
+		{
+			"name": "Android Bluetooth Controller Application",
+			"subheader": "Bluetooth Developer",
+			"description": "Android mobile application for controlling and communicating with a Raspberry PI via Bluetooth signals.",
+			"icon": "",
+			"link": "",
+			"bulletpoints": [
+				"Developed a native Android application in Java to provide Bluetooth communication with a Raspberry PI",
+				"Implemented Bluetooth scanning and connection with other devices",
+				"Planned and collaborated signal headers and payloads with Raspberry PI developer for varying communication functionalities",
+				"Assisted GUI Developer in live display of communication status and received data to GUI",
+				"Designed and implemented a 5-attempt Bluetooth reconnection mechanism for consistent and robust connection"
+			]
 		}
 	],
 	"miscellaneous": [
