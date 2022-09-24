@@ -340,6 +340,35 @@ li::marker {
 	animation-duration: 0.3s;
 }
 
+.disabled {
+	cursor: not-allowed;
+}
+
+.disabled:hover {
+	cursor: not-allowed;
+}
+
+.enabled {
+	cursor: pointer;
+}
+
+.enabled:hover {
+	cursor: pointer;
+}
+
+.lock-failed {
+	width: 15vw;
+	animation-name: failed;
+}
+
+.lock-failed:hover {
+	cursor: not-allowed;
+}
+
+.lock-success {
+	width: 15vw;
+}
+
 @keyframes shake {
 	0% {
 		transform: rotate(0);
@@ -366,10 +395,6 @@ li::marker {
 	width: 3rem;
 	height: 3rem;
 	margin-top: 5vh;
-}
-
-.unlocker-item:hover {
-	cursor: pointer;
 }
 
 .unlocker-item-filled {

@@ -22,6 +22,7 @@ export default function Lock(props: PropTypes) {
 				}, 300);
 			} else if (props.input !== props.secret) {
 				// Input is incorrect
+				lockElement.className = 'lock-failed';
 				props.setLockState('error');
 			} else {
 				// Input completely filled and correct

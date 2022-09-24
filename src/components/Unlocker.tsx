@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export interface PropTypes {
 	secret: string;
@@ -6,9 +6,9 @@ export interface PropTypes {
 }
 
 const unlockers = ['1', '2', '3', '4'];
+const timer = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
 const animateAnswer = async (secret: string) => {
-	const timer = (ms: number) => new Promise((res) => setTimeout(res, ms));
 	await timer(1000);
 	// Fill the unlocker items in sequence of the secret:
 	for (const c of secret) {
@@ -23,7 +23,7 @@ const animateAnswer = async (secret: string) => {
 	for (const c of secret) {
 		const unlockerElement = document.getElementById('unlocker' + c);
 		if (unlockerElement) {
-			unlockerElement.className = 'unlocker-item';
+			unlockerElement.className = 'unlocker-item enabled';
 		}
 	}
 };
@@ -37,7 +37,10 @@ export default function Unlocker(props: PropTypes) {
 	const onClickHandler = (input: string) => {
 		const unlockerElement = document.getElementById('unlocker' + input);
 		if (unlockerElement) {
-			if (unlockerElement.className === 'unlocker-item-filled') {
+			if (
+				unlockerElement.className === 'unlocker-item-filled' ||
+				unlockerElement.className === 'unlocker-item disabled'
+			) {
 				return;
 			}
 			unlockerElement.className = 'unlocker-item-filled';
@@ -51,7 +54,7 @@ export default function Unlocker(props: PropTypes) {
 				return (
 					<div
 						id={'unlocker' + item}
-						className='unlocker-item'
+						className='unlocker-item disabled'
 						onClick={() => onClickHandler(item)}
 					></div>
 				);
