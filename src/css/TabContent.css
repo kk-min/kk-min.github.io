@@ -151,6 +151,17 @@
     width: 50px;
     object-fit: contain;
     margin: 0 10px;
+    animation-name: github-logo-grow;
+    animation-duration: 1s;
+}
+
+@keyframes github-logo-grow {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .card-container {
