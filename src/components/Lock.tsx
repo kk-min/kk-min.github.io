@@ -35,7 +35,9 @@ export default function Lock(props: PropTypes) {
 		<div className='lock-container'>
 			<img
 				id='lock'
-				className='lock'
+				className={
+					'lock' + (props.lockState === 'error' ? '-failed' : '')
+				}
 				src={
 					props.lockState === 'default'
 						? padlock_default
