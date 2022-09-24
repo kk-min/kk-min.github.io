@@ -323,7 +323,7 @@ li::marker {
 
 .lock-container {
 	display: flex;
-	margin-top: 10vh;
+	margin-top: 5vh;
 	justify-content: center;
 }
 
@@ -353,4 +353,30 @@ li::marker {
 	100% {
 		transform: rotate(0);
 	}
+}
+
+.unlocker-container {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+}
+
+.unlocker-item {
+	outline: 3px solid var(--tab-highlight-color);
+	width: 3rem;
+	height: 3rem;
+	margin-top: 5vh;
+}
+
+.unlocker-item:hover {
+	cursor: pointer;
+}
+
+.unlocker-item-filled {
+	background-color: var(--tab-highlight-color);
+	outline: 3px solid var(--tab-highlight-color);
+	width: 3rem;
+	height: 3rem;
+	margin-top: 5vh;
+	cursor: default;
 }
