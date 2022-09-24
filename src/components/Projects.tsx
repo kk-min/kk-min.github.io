@@ -80,6 +80,7 @@ export default function Projects() {
 							projectDescription={project.description}
 							projectIcon={project.icon}
 							projectRole={project.subheader}
+							projectLink={project.link}
 						/>
 					);
 				})}

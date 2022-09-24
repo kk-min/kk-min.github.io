@@ -263,3 +263,11 @@
 .project-description {
 	margin-top: 2vh;
 }
+
+.with-link {
+	cursor: pointer;
+}
+
+.no-link {
+	cursor: default;
+}
