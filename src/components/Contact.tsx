@@ -19,7 +19,7 @@ const getRandomSecret = (sourceArray: string[]) => {
 export default function Contact() {
 	const [secret, setSecret] = useState('');
 	const [input, setInput] = useState('');
-	const [lockState, setLockState] = useState('locked');
+	const [lockState, setLockState] = useState('default');
 
 	useEffect(() => {
 		setSecret((prev) => getRandomSecret(randomizerArray));
@@ -32,7 +32,12 @@ export default function Contact() {
 	return (
 		<div className='content'>
 			<h1 className='tab-title'>Contact</h1>
-			<Lock secret={secret} input={input} />
+			<Lock
+				secret={secret}
+				input={input}
+				lockState={lockState}
+				setLockState={setLockState}
+			/>
 			<Unlocker secret={secret} addInput={addInput} />
 		</div>
 	);

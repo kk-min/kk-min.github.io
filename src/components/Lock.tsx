@@ -6,6 +6,8 @@ import padlock_error from '../assets/padlock_error.png';
 export interface PropTypes {
 	secret: string;
 	input: string;
+	lockState: string;
+	setLockState: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export default function Lock(props: PropTypes) {
@@ -20,8 +22,10 @@ export default function Lock(props: PropTypes) {
 				}, 300);
 			} else if (props.input !== props.secret) {
 				// Input is incorrect
+				props.setLockState('error');
 			} else {
 				// Input completely filled and correct
+				props.setLockState('open');
 			}
 		}
 	};
@@ -31,7 +35,13 @@ export default function Lock(props: PropTypes) {
 			<img
 				id='lock'
 				className='lock'
-				src={padlock_default}
+				src={
+					props.lockState === 'default'
+						? padlock_default
+						: props.lockState === 'open'
+						? padlock_open
+						: padlock_error
+				}
 				onClick={onClickHandler}
 			></img>
 		</div>

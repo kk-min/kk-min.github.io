@@ -13,8 +13,6 @@ const animateAnswer = async (secret: string) => {
 	// Fill the unlocker items in sequence of the secret:
 	for (const c of secret) {
 		const unlockerElement = document.getElementById('unlocker' + c);
-		console.log(c);
-		console.log(unlockerElement);
 		if (unlockerElement) {
 			unlockerElement.className = 'unlocker-item-filled';
 			await timer(1000);
