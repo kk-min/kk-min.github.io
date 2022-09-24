@@ -168,7 +168,7 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	margin-top: 5vh;
+	margin-top: 3vh;
 	gap: 2.5rem;
 	flex-wrap: wrap;
 	animation-name: slide-in;
@@ -185,14 +185,19 @@
 }
 
 .item-card {
-	border: 1px solid var(--secondary-font-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px;
+	border: 3px solid var(--tab-highlight-color);
 	border-radius: 5px;
 	margin: 5vh;
 	margin-top: 0;
-	text-align: left;
+	text-align: center;
 	transition: 0.2s;
 	box-shadow: 4px 4px 5px var(--secondary-bg-color);
 	width: 45vh;
+	height: auto;
 }
 
 .item-card:hover {
@@ -201,29 +206,27 @@
 }
 
 .card-image {
+	margin: auto;
 	border-top-left-radius: inherit;
 	border-top-right-radius: inherit;
-	width: inherit;
-	height: 30vh;
-	object-fit: cover;
+	margin-top: 20px;
+	height: 15vh;
+	object-fit: contain;
 }
 
 .card-title {
 	font-size: 1.5rem;
 	max-width: inherit;
-	padding-left: 10%;
 	color: var(--font-highlight-color);
 	overflow: hidden;
 }
 
 .card-description {
 	font-size: 1rem;
-	padding-left: 10%;
 	color: var(--secondary-font-color);
 }
 
 .card-footer {
-	font-size: 0.8rem;
-	padding-left: 10%;
+	font-size: 1rem;
 	color: var(--tab-highlight-color);
 }

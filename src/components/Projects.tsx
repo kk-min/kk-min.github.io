@@ -1,6 +1,10 @@
 import React from 'react';
+import { getParseTreeNode } from 'typescript';
 import github_logo from '../assets/github_logo.png';
 import { ItemCard } from './ItemCard';
+import web from '../assets/web.png';
+import gears from '../assets/gears.png';
+import pencil_case from '../assets/pencil_case.png';
 
 export default function Projects() {
 	const [selection, setSelection] = React.useState('all');
@@ -11,7 +15,11 @@ export default function Projects() {
 			<div className='content'>
 				<div className='title-container'>
 					<h1 className='tab-title'>Projects</h1>
-					<a href='https://github.com/kk-min'>
+					<a
+						href='https://github.com/kk-min'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
 						<img
 							className='github-logo'
 							src={github_logo}
@@ -22,7 +30,7 @@ export default function Projects() {
 				</div>
 				<div className='card-container'>
 					<ItemCard
-						image=''
+						image={web}
 						itemName='Frontend'
 						bodyText='Web development'
 						bottomText='React, TypeScript, Javascript, CSS'
@@ -31,14 +39,14 @@ export default function Projects() {
 						}
 					/>
 					<ItemCard
-						image=''
+						image={gears}
 						itemName='Backend'
 						bodyText='Android / Database / Networking'
 						bottomText='Java, Kotlin, C/C++'
 						onClickHandler={() => setSelection((prev) => 'backend')}
 					/>
 					<ItemCard
-						image=''
+						image={pencil_case}
 						itemName='Miscellaneous'
 						bodyText='Bits and pieces'
 						bottomText='Python, VBA'
