@@ -236,6 +236,7 @@
 
 .back-button {
 	position: absolute;
+	z-index: 0;
 	right: 0;
 	margin-right: 10vh;
 	color: var(--tab-highlight-color);
@@ -243,10 +244,37 @@
 	cursor: pointer;
 }
 
+.project-container-no-link {
+	border: 2px solid var(--font-highlight-color);
+	margin: 5vh 10vh 5vh 10vh;
+	padding: 3vh;
+	cursor: default;
+}
+
 .project-container {
 	border: 2px solid var(--font-highlight-color);
 	margin: 5vh 10vh 5vh 10vh;
 	padding: 3vh;
+	cursor: pointer;
+}
+
+.project-container:hover {
+	animation-name: card-hover;
+	animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes card-hover {
+	/* make card bob up and down */
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 .project-title {
@@ -262,14 +290,6 @@
 
 .project-description {
 	margin-top: 2vh;
-}
-
-.with-link {
-	cursor: pointer;
-}
-
-.no-link {
-	cursor: default;
 }
 
 li:not(last-child) {

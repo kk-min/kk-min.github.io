@@ -14,12 +14,17 @@
 			]
 		},
 		{
-			"name": "SGSAFETY",
+			"name": "SGSAFETY - Web Application",
 			"subheader": "Team Lead",
 			"description": "Promotional website for SGSafety Android mobile application, a distress signal broadcaster and receiver.",
 			"icon": "",
-			"link": "",
-			"bulletpoints": []
+			"link": "https://github.com/kk-min/sgsafety-mobile",
+			"bulletpoints": [
+				"Developed a web application with React framework to promote SGSAFETY Android mobile application",
+				"Led a team of 6 members through the software development process from planning to deployment",
+				"Managed project timeline with Agile framework, delegated tasks to team members for timely completion",
+				"Integrated live AED location map into website via SG government’s AED Locations API"
+			]
 		},
 		{
 			"name": "Chat Application Web",
