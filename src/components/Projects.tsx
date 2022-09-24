@@ -4,6 +4,8 @@ import { ItemCard } from './ItemCard';
 
 export default function Projects() {
 	const [selection, setSelection] = React.useState('all');
+	// Hide horizontal scrollbar:
+	document.body.style.overflowX = 'hidden';
 	if (selection === 'all') {
 		return (
 			<div className='content'>

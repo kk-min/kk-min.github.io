@@ -41,7 +41,7 @@ export default function TabHeaders(props: PropTypes) {
 	};
 
 	return (
-		<div className='tabs'>
+		<div className='tabs' id='tabs'>
 			{tabNames.map((name) => (
 				<button
 					id={name}

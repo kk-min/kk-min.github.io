@@ -34,7 +34,7 @@ export default function AboutMe(props: PropTypes) {
 					<b className='arrow'>🡳</b>
 				</button>
 			</div>
-			<body className='about-me-content' id='about-me-content'>
+			<div className='about-me-content' id='about-me-content'>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
 				sed eros lorem. Nullam vitae est in ante pellentesque dictum.
 				Integer orci metus, consectetur et placerat vel, bibendum vel
@@ -91,7 +91,7 @@ export default function AboutMe(props: PropTypes) {
 				mauris. Integer gravida sodales massa vel egestas. Mauris sit
 				amet diam vitae nunc dignissim vulputate. Phasellus non ornare
 				tellus. Duis consequat convallis dolor et molestie.
-			</body>
+			</div>
 		</div>
 	);
 }

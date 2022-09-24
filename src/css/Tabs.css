@@ -1,133 +1,133 @@
 :root {
-    --main-bg-color: #ffffff;
-    --secondary-bg-color: #fff9f0;
-    --tab-highlight-color: #007ef1;
-    --font-highlight-color: #f17300;
-    --tab-title-color: #203b69;
-    --product-title-color: #201c49;
-    --secondary-font-color: #919191;
+	--main-bg-color: #ffffff;
+	--secondary-bg-color: #fff9f0;
+	--tab-highlight-color: #007ef1;
+	--font-highlight-color: #f17300;
+	--tab-title-color: #203b69;
+	--product-title-color: #201c49;
+	--secondary-font-color: #919191;
 }
 
 .tabs-container {
-    flex-grow: 1;
+	flex-grow: 1;
 }
 
 .tabs {
-    display: flex;
-    justify-content: flex-start;
-    width: 100vw;
-    max-height: 10vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    animation-name: tabslide;
-    animation-duration: 2.5s;
+	display: flex;
+	justify-content: flex-start;
+	width: 100vw;
+	max-height: 10vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	animation-name: tabslide;
+	animation-duration: 2.5s;
 }
 
 @keyframes tabslide {
-    0% {
-        top: -10vh;
-    }
-    75% {
-        top: -10vh;
-    }
-    100% {
-        top: 0;
-    }
+	0% {
+		top: -10vh;
+	}
+	75% {
+		top: -10vh;
+	}
+	100% {
+		top: 0;
+	}
 }
 
 .tabsfiller {
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    align-items: center;
-    border-bottom: 1px solid var(--secondary-font-color);
-    background-color: var(--secondary-bg-color);
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	align-items: center;
+	border-bottom: 1px solid var(--secondary-font-color);
+	background-color: var(--secondary-bg-color);
 }
 
 .tabslogo {
-    height: 55%;
-    max-width: 200px;
-    object-fit: contain;
+	height: 55%;
+	max-width: 200px;
+	object-fit: contain;
 }
 
 .tabheader {
-    color: var(--secondary-font-color);
-    font-size: 1.5em;
-    background-color: var(--main-bg-color);
-    border-top: 0;
-    border-left: 0;
-    border-right: 1px solid var(--secondary-font-color);
-    border-bottom: 1px solid var(--secondary-font-color);
-    min-height: 8vh;
-    min-width: 45vh;
-    cursor: pointer;
-    padding: 15px 30px 15px 30px;
+	color: var(--secondary-font-color);
+	font-size: 1.5em;
+	background-color: var(--main-bg-color);
+	border-top: 0;
+	border-left: 0;
+	border-right: 1px solid var(--secondary-font-color);
+	border-bottom: 1px solid var(--secondary-font-color);
+	min-height: 8vh;
+	min-width: 45vh;
+	cursor: pointer;
+	padding: 15px 30px 15px 30px;
 }
 
 .tabheader:hover {
-    color: var(--font-highlight-color);
+	color: var(--font-highlight-color);
 }
 
 .tabheaderactive {
-    color: var(--font-highlight-color);
-    font-size: 1.5em;
-    font-weight: bold;
-    background-color: var(--main-bg-color);
-    border-top: 5px solid var(--tab-highlight-color);
-    border-left: 0;
-    border-right: 1px solid var(--secondary-font-color);
-    border-bottom: 0;
-    min-height: 8vh;
-    min-width: 45vh;
-    cursor: pointer;
-    padding: 15px 30px 15px 30px;
+	color: var(--font-highlight-color);
+	font-size: 1.5em;
+	font-weight: bold;
+	background-color: var(--main-bg-color);
+	border-top: 5px solid var(--tab-highlight-color);
+	border-left: 0;
+	border-right: 1px solid var(--secondary-font-color);
+	border-bottom: 0;
+	min-height: 8vh;
+	min-width: 45vh;
+	cursor: pointer;
+	padding: 15px 30px 15px 30px;
 }
 
 .tabbody {
-    align-items: center;
+	align-items: center;
 }
 
 @media (max-width: 1279px) {
 }
 
 @media (max-width: 724px) {
-    .tabheader {
-        font-size: 10px;
-    }
-    .tabheaderactive {
-        font-size: 10px;
-    }
+	.tabheader {
+		font-size: 10px;
+	}
+	.tabheaderactive {
+		font-size: 10px;
+	}
 }
 
 @media (max-width: 562px) {
-    .tabheader {
-        font-size: 10px;
-        padding: 1px 5px 1px 5px;
-    }
-    .tabheaderactive {
-        font-size: 10px;
-        padding: 1px 5px 1px 5px;
-    }
-    .tabsfiller {
-        justify-content: center;
-    }
+	.tabheader {
+		font-size: 10px;
+		padding: 1px 5px 1px 5px;
+	}
+	.tabheaderactive {
+		font-size: 10px;
+		padding: 1px 5px 1px 5px;
+	}
+	.tabsfiller {
+		justify-content: center;
+	}
 }
 
 @media (max-width: 360px) {
-    .tabheader {
-        font-size: 10px;
-        padding: 1px 5px 1px 5px;
-    }
-    .tabheaderactive {
-        font-size: 10px;
-        padding: 1px 5px 1px 5px;
-    }
-    .tabsfiller {
-        justify-content: left;
-    }
-    .tabslogo {
-        margin-left: 5vh;
-    }
+	.tabheader {
+		font-size: 10px;
+		padding: 1px 5px 1px 5px;
+	}
+	.tabheaderactive {
+		font-size: 10px;
+		padding: 1px 5px 1px 5px;
+	}
+	.tabsfiller {
+		justify-content: left;
+	}
+	.tabslogo {
+		margin-left: 5vh;
+	}
 }
