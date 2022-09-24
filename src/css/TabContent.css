@@ -278,13 +278,12 @@
 }
 
 .project-footer {
-	position: absolute;
-	bottom: 20px;
 	color: var(--secondary-font-color);
 	font-size: 0.8rem;
 	align-self: center;
 	animation-name: fade-in;
 	animation-duration: 1.5s;
+	padding-bottom: auto;
 }
 
 @keyframes fade-in {
