@@ -5,6 +5,8 @@ import { ItemCard } from './ItemCard';
 import web from '../assets/web.png';
 import gears from '../assets/gears.png';
 import pencil_case from '../assets/pencil_case.png';
+import ProjectItem from './ProjectItem';
+import project_data from '../data/project_data.json';
 
 export default function Projects() {
 	const [selection, setSelection] = React.useState('all');
@@ -60,8 +62,41 @@ export default function Projects() {
 	} else if (selection === 'frontend') {
 		return (
 			<div className='content'>
+				<div
+					className='back-button'
+					onClick={() => setSelection('all')}
+				>
+					⮌
+				</div>
 				<div className='title-container'>
-					<h1 className='tab-title'>Frontend</h1>
+					<h1 className='tab-title'>
+						Frontend <img src={web} style={{ height: '6vh' }} />
+					</h1>
+				</div>
+				{project_data.frontend.map((project) => {
+					return (
+						<ProjectItem
+							projectTitle={project.name}
+							projectDescription={project.description}
+							projectIcon={project.icon}
+						/>
+					);
+				})}
+			</div>
+		);
+	} else if (selection === 'backend') {
+		return (
+			<div className='content'>
+				<div className='title-container'>
+					<h1 className='tab-title'>Backend</h1>
+				</div>
+			</div>
+		);
+	} else if (selection === 'miscellaneous') {
+		return (
+			<div className='content'>
+				<div className='title-container'>
+					<h1 className='tab-title'>Miscellaneous</h1>
 				</div>
 			</div>
 		);

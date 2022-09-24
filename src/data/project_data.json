@@ -1,0 +1,16 @@
+{
+	"frontend": [
+		{
+			"name": "MediCo",
+			"subheader": "Project Manager  / Team Lead",
+			"description": "Medical consultation web application for remote access to healthcare services with accessibility features for elderly.",
+			"icon": ""
+		},
+		{
+			"name": "SGSAFETY",
+			"subheader": "Team Lead",
+			"description": "Promotional website for SGSafety Android mobile application, a distress signal broadcaster and receiver.",
+			"icon": ""
+		}
+	]
+}

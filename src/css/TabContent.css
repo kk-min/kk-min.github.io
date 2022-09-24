@@ -5,7 +5,7 @@
 	--font-highlight-color: #f17300;
 	--tab-title-color: #203b69;
 	--product-title-color: #201c49;
-	--secondary-font-color: #919191;
+	--secondary-font-color: #6f7378;
 }
 
 .content-container {
@@ -133,9 +133,13 @@
 }
 
 .tab-title {
+	display: flex;
 	font-size: 2.5em;
 	margin-left: 10vh;
 	width: fit-content;
+	text-align: center;
+	align-items: center;
+	gap: 1rem;
 	color: var(--tab-highlight-color);
 }
 
@@ -229,4 +233,28 @@
 .card-footer {
 	font-size: 1rem;
 	color: var(--tab-highlight-color);
+}
+
+.back-button {
+	position: absolute;
+	right: 0;
+	margin-right: 10vh;
+	color: var(--tab-highlight-color);
+	font-size: 3rem;
+	cursor: pointer;
+}
+
+.project-container {
+	border: 2px solid var(--font-highlight-color);
+	margin: 5vh;
+	padding: 2vh;
+}
+
+.project-title {
+	font-size: 2rem;
+	color: var(--tab-highlight-color);
+}
+
+.project-description {
+	color: var(--secondary-font-color);
 }
