@@ -244,6 +244,29 @@
 	cursor: pointer;
 }
 
+.reset-button {
+	position: absolute;
+	z-index: 0;
+	right: 0;
+	margin-right: 10vh;
+	color: var(--tab-highlight-color);
+	font-size: 3rem;
+	cursor: pointer;
+}
+
+.rotate {
+	animation: rotate 1s;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
 .project-container-no-link {
 	border: 2px solid var(--font-highlight-color);
 	margin: 5vh 10vh 5vh 10vh;

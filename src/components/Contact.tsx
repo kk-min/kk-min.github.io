@@ -29,8 +29,28 @@ export default function Contact() {
 		setInput((prev) => prev + input);
 	};
 
+	const resetHandler = () => {
+		const resetElement = document.getElementById('reset-button');
+		if (resetElement) {
+			resetElement.classList.add('rotate');
+			setSecret((prev) => getRandomSecret(randomizerArray));
+			setInput('');
+			setLockState('default');
+		}
+		setTimeout(() => {
+			resetElement?.classList.remove('rotate');
+		}, 1500);
+	};
+
 	return (
 		<div className='content'>
+			<div
+				id='reset-button'
+				className='reset-button'
+				onClick={resetHandler}
+			>
+				⭯
+			</div>
 			<h1 className='tab-title'>Contact</h1>
 			<Lock
 				secret={secret}
