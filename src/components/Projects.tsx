@@ -79,6 +79,7 @@ export default function Projects() {
 							projectTitle={project.name}
 							projectDescription={project.description}
 							projectIcon={project.icon}
+							projectRole={project.subheader}
 						/>
 					);
 				})}
