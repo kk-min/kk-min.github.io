@@ -43,6 +43,9 @@ export default function Contact() {
 	};
 
 	const resetHandler = () => {
+		if (isAnimating) {
+			return;
+		}
 		const resetElement = document.getElementById('reset-button');
 		if (resetElement) {
 			if (resetElement.className === 'reset-button disabled') {
