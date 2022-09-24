@@ -17,13 +17,12 @@ const getRandomSecret = (sourceArray: string[]) => {
 };
 
 export default function Contact() {
-	const [secret, setSecret] = useState('');
+	const [secret, setSecret] = useState(getRandomSecret(randomizerArray));
 	const [input, setInput] = useState('');
 	const [lockState, setLockState] = useState('default');
 	const [isAnimating, setIsAnimating] = useState(true);
 
 	useEffect(() => {
-		setSecret((prev) => getRandomSecret(randomizerArray));
 		setTimeout(() => {
 			setIsAnimating(false);
 		}, 5000);

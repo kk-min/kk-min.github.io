@@ -20,7 +20,6 @@ const animateAnswer = async (secret: string) => {
 			await timer(1000);
 		}
 	}
-
 	resetUnlockers('enabled');
 };
 
@@ -36,7 +35,6 @@ const resetUnlockers = (status: string) => {
 
 export default function Unlocker(props: PropTypes) {
 	useEffect(() => {
-		console.log(props.secret);
 		animateAnswer(props.secret);
 	}, [props.secret]);
 
