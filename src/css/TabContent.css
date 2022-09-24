@@ -420,8 +420,16 @@ li::marker {
 	}
 }
 
-.lock-success {
+.lock-exit {
 	width: 15vw;
+	animation-name: fade-out;
+	animation-delay: 1s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.lock-exit:hover {
+	cursor: default;
 }
 
 @keyframes shake {
@@ -443,6 +451,26 @@ li::marker {
 	display: flex;
 	justify-content: center;
 	gap: 3rem;
+}
+
+.unlocker-container-exit {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	animation-name: fade-out;
+	animation-delay: 1s;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+	}
 }
 
 .unlocker-item {

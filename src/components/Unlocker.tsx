@@ -4,6 +4,7 @@ import { isPropertySignature } from 'typescript';
 export interface PropTypes {
 	secret: string;
 	addInput: (input: string) => void;
+	success: boolean;
 }
 
 const unlockers = ['1', '2', '3', '4'];
@@ -33,10 +34,23 @@ const resetUnlockers = (status: string) => {
 	}
 };
 
+const fillUnlockers = () => {
+	for (const c of unlockers) {
+		const unlockerElement = document.getElementById('unlocker' + c);
+		if (unlockerElement) {
+			unlockerElement.className = 'unlocker-item-filled';
+		}
+	}
+};
+
 export default function Unlocker(props: PropTypes) {
 	useEffect(() => {
+		if (props.success) {
+			fillUnlockers();
+			return;
+		}
 		animateAnswer(props.secret);
-	}, [props.secret]);
+	}, [props.secret, props.success]);
 
 	const onClickHandler = (input: string) => {
 		const unlockerElement = document.getElementById('unlocker' + input);
@@ -53,7 +67,12 @@ export default function Unlocker(props: PropTypes) {
 	};
 
 	return (
-		<div key={props.secret} className='unlocker-container'>
+		<div
+			key={props.secret}
+			className={
+				props.success ? 'unlocker-container-exit' : 'unlocker-container'
+			}
+		>
 			{unlockers.map((item) => {
 				return (
 					<div

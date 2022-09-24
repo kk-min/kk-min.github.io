@@ -8,6 +8,7 @@ export interface PropTypes {
 	input: string;
 	lockState: string;
 	setLockState: React.Dispatch<React.SetStateAction<string>>;
+	success: boolean;
 }
 
 export default function Lock(props: PropTypes) {
@@ -36,7 +37,12 @@ export default function Lock(props: PropTypes) {
 			<img
 				id='lock'
 				className={
-					'lock' + (props.lockState === 'error' ? '-failed' : '')
+					'lock' +
+					(props.lockState === 'error'
+						? '-failed'
+						: props.success
+						? '-exit'
+						: '')
 				}
 				src={
 					props.lockState === 'default'

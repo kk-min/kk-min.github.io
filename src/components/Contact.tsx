@@ -26,6 +26,9 @@ export default function Contact() {
 		setTimeout(() => {
 			setIsAnimating(false);
 		}, 5000);
+		if (lockState === 'open') {
+			setTimeout(() => {}, 2000);
+		}
 	}, []);
 
 	useEffect(() => {
@@ -67,6 +70,23 @@ export default function Contact() {
 		}, 5000);
 	};
 
+	if (lockState === 'open') {
+		return (
+			<div className='content'>
+				<h1 className='tab-title'>Contact</h1>
+				<Lock
+					secret={secret}
+					input={input}
+					lockState={lockState}
+					setLockState={setLockState}
+					success={true}
+				/>
+				<Unlocker secret={secret} addInput={addInput} success={true} />
+				<div className='contact-container'></div>
+			</div>
+		);
+	}
+
 	return (
 		<div className='content'>
 			<div
@@ -82,8 +102,9 @@ export default function Contact() {
 				input={input}
 				lockState={lockState}
 				setLockState={setLockState}
+				success={false}
 			/>
-			<Unlocker secret={secret} addInput={addInput} />
+			<Unlocker secret={secret} addInput={addInput} success={false} />
 		</div>
 	);
 }
