@@ -23,22 +23,21 @@ export default function Contact() {
     const [isAnimating, setIsAnimating] = useState(true);
 
     useEffect(() => {
-        console.log('Contact rendered.');
-        console.log(secret);
-        console.log(input);
-        console.log(lockState);
-        console.log(isAnimating);
-
         if (lockState === 'open') {
             setTimeout(() => {}, 2000);
             return;
+        } else {
+            setTimeout(() => {
+                setIsAnimating(false);
+            }, 5000);
         }
-        setTimeout(() => {
-            setIsAnimating(false);
-        }, 5000);
     }, [lockState]);
 
     useEffect(() => {
+        if (lockState === 'open') {
+            return;
+        }
+
         const resetElement = document.getElementById('reset-button');
         if (!isAnimating) {
             if (resetElement) {
@@ -76,26 +75,6 @@ export default function Contact() {
             setIsAnimating((prev) => false);
         }, 5000);
     };
-
-    if (lockState === 'open') {
-        return (
-            <div className='content'>
-                <h1 className='tab-title'>Contact</h1>
-                <Lock
-                    secret={secret}
-                    input={input}
-                    lockState={lockState}
-                    setLockState={setLockState}
-                />
-                <Unlocker
-                    secret={secret}
-                    addInput={addInput}
-                    lockState={lockState}
-                />
-                <div className='contact-container'></div>
-            </div>
-        );
-    }
 
     return (
         <div className='content'>

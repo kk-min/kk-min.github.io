@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import padlock_default from '../assets/padlock_default.png';
 import padlock_open from '../assets/padlock_open.png';
 import padlock_error from '../assets/padlock_error.png';
@@ -11,9 +11,17 @@ export interface PropTypes {
 }
 
 export default function Lock(props: PropTypes) {
-    useEffect(() => {
-        console.log('Lock rendered.');
-    }, [props.lockState]);
+    const defaultLock = useMemo(() => {
+        return padlock_default;
+    }, []);
+
+    const openLock = useMemo(() => {
+        return padlock_open;
+    }, []);
+
+    const errorLock = useMemo(() => {
+        return padlock_error;
+    }, []);
 
     const onClickHandler = () => {
         const lockElement = document.getElementById('lock');
@@ -41,18 +49,18 @@ export default function Lock(props: PropTypes) {
                 id='lock'
                 className={
                     'lock' +
-                    (props.lockState === 'error'
-                        ? '-failed'
-                        : props.lockState === 'open'
+                    (props.lockState === 'open'
                         ? '-exit'
+                        : props.lockState === 'error'
+                        ? '-failed'
                         : '')
                 }
                 src={
                     props.lockState === 'default'
-                        ? padlock_default
+                        ? defaultLock
                         : props.lockState === 'open'
-                        ? padlock_open
-                        : padlock_error
+                        ? openLock
+                        : errorLock
                 }
                 onClick={onClickHandler}
             ></img>
