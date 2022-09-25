@@ -64,9 +64,10 @@ export default function Projects() {
 							setSelection((prev) => 'miscellaneous')
 						}
 					/>
-				</div>
-				<div className='project-footer'>
-					For a full resume/CV, please reach me via the Contact tab.
+					<div className='project-footer'>
+						For a full resume/CV, please reach me via the Contact
+						tab.
+					</div>
 				</div>
 			</div>
 		);
