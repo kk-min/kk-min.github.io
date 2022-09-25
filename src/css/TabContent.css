@@ -501,8 +501,11 @@ li::marker {
 	animation-name: fade-in;
 	opacity: 0;
 	animation-duration: 1.5s;
-	animation-delay: 2s;
 	animation-fill-mode: forwards;
+}
+
+.contact-info-invisible {
+	display: none;
 }
 
 @keyframes fade-in {
