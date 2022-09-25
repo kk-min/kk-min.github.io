@@ -23,6 +23,8 @@ export default function Lock(props: PropTypes) {
         return padlock_error;
     }, []);
 
+    useEffect(() => {}, [props.lockState]);
+
     const onClickHandler = () => {
         const lockElement = document.getElementById('lock');
         if (lockElement) {
@@ -44,9 +46,15 @@ export default function Lock(props: PropTypes) {
     };
 
     return (
-        <div className='lock-container'>
+        <div
+            id='lock'
+            className={
+                props.lockState == 'open'
+                    ? 'lock-container-exit'
+                    : 'lock-container'
+            }
+        >
             <img
-                id='lock'
                 className={
                     'lock' +
                     (props.lockState === 'open'

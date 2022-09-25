@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { ItemCard } from './ItemCard';
 import Lock from './Lock';
+import ProjectItem from './ProjectItem';
 import Unlocker from './Unlocker';
 
 const randomizerArray = ['1', '2', '3', '4'];
@@ -23,8 +25,18 @@ export default function Contact() {
     const [isAnimating, setIsAnimating] = useState(true);
 
     useEffect(() => {
+        const lockElement = document.getElementById('lock');
+        const unlockerElement = document.getElementById('unlocker');
+
         if (lockState === 'open') {
-            setTimeout(() => {}, 2000);
+            setTimeout(() => {
+                if (lockElement) {
+                    lockElement.style.display = 'none';
+                }
+                if (unlockerElement) {
+                    unlockerElement.style.display = 'none';
+                }
+            }, 2000);
             return;
         } else {
             setTimeout(() => {
@@ -64,6 +76,11 @@ export default function Contact() {
             resetElement.classList.remove('enabled');
             resetElement.classList.add('disabled');
 
+            const lockElement = document.getElementById('lock');
+            if (lockElement) {
+                lockElement.style.removeProperty('display');
+            }
+
             setSecret((prev) => getRandomSecret(randomizerArray));
             setInput('');
             setLockState('default');
@@ -97,6 +114,21 @@ export default function Contact() {
                 addInput={addInput}
                 lockState={lockState}
             />
+            {lockState === 'open' ? (
+                <div className='contact-info'>
+                    <ProjectItem
+                        projectTitle='Min Kabar Kyaw'
+                        projectDescription=''
+                        projectIcon=''
+                        projectRole='Software Developer'
+                        projectLink=''
+                        projectBulletPoints={[
+                            'Email: minkabarkyaw@gmail.com',
+                            'LinkedIn: https://www.linkedin.com/in/minkk/',
+                        ]}
+                    />
+                </div>
+            ) : null}
         </div>
     );
 }

@@ -68,6 +68,7 @@ export default function Unlocker(props: PropTypes) {
 
     return (
         <div
+            id='unlocker'
             key={props.secret}
             className={
                 props.lockState == 'open'
