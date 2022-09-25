@@ -8,10 +8,13 @@ export interface PropTypes {
     input: string;
     lockState: string;
     setLockState: React.Dispatch<React.SetStateAction<string>>;
-    success: boolean;
 }
 
 export default function Lock(props: PropTypes) {
+    useEffect(() => {
+        console.log('Lock rendered.');
+    }, [props.lockState]);
+
     const onClickHandler = () => {
         const lockElement = document.getElementById('lock');
         if (lockElement) {
@@ -40,7 +43,7 @@ export default function Lock(props: PropTypes) {
                     'lock' +
                     (props.lockState === 'error'
                         ? '-failed'
-                        : props.success
+                        : props.lockState === 'open'
                         ? '-exit'
                         : '')
                 }

@@ -5,106 +5,119 @@ import Unlocker from './Unlocker';
 const randomizerArray = ['1', '2', '3', '4'];
 
 const getRandomSecret = (sourceArray: string[]) => {
-	let secret: string = '';
-	let tempArray = [...sourceArray];
-	while (tempArray.length > 0) {
-		let index = Math.floor(Math.random() * tempArray.length);
-		let randomItem = tempArray[index];
-		secret += randomItem;
-		tempArray.splice(index, 1); // Remove selected item from array
-	}
-	return secret;
+    let secret: string = '';
+    let tempArray = [...sourceArray];
+    while (tempArray.length > 0) {
+        let index = Math.floor(Math.random() * tempArray.length);
+        let randomItem = tempArray[index];
+        secret += randomItem;
+        tempArray.splice(index, 1); // Remove selected item from array
+    }
+    return secret;
 };
 
 export default function Contact() {
-	const [secret, setSecret] = useState(getRandomSecret(randomizerArray));
-	const [input, setInput] = useState('');
-	const [lockState, setLockState] = useState('default');
-	const [isAnimating, setIsAnimating] = useState(true);
+    const [secret, setSecret] = useState(getRandomSecret(randomizerArray));
+    const [input, setInput] = useState('');
+    const [lockState, setLockState] = useState('default');
+    const [isAnimating, setIsAnimating] = useState(true);
 
-	useEffect(() => {
-		setTimeout(() => {
-			setIsAnimating(false);
-		}, 5000);
-		if (lockState === 'open') {
-			setTimeout(() => {}, 2000);
-		}
-	}, []);
+    useEffect(() => {
+        console.log('Contact rendered.');
+        console.log(secret);
+        console.log(input);
+        console.log(lockState);
+        console.log(isAnimating);
 
-	useEffect(() => {
-		const resetElement = document.getElementById('reset-button');
-		if (!isAnimating) {
-			if (resetElement) {
-				resetElement.className = 'reset-button enabled';
-			}
-		}
-	}, [isAnimating]);
+        if (lockState === 'open') {
+            setTimeout(() => {}, 2000);
+            return;
+        }
+        setTimeout(() => {
+            setIsAnimating(false);
+        }, 5000);
+    }, [lockState]);
 
-	const addInput = (input: string) => {
-		setInput((prev) => prev + input);
-	};
+    useEffect(() => {
+        const resetElement = document.getElementById('reset-button');
+        if (!isAnimating) {
+            if (resetElement) {
+                resetElement.className = 'reset-button enabled';
+            }
+        }
+    }, [isAnimating]);
 
-	const resetHandler = () => {
-		if (isAnimating) {
-			return;
-		}
-		const resetElement = document.getElementById('reset-button');
-		if (resetElement) {
-			if (resetElement.className === 'reset-button disabled') {
-				return;
-			}
+    const addInput = (input: string) => {
+        setInput((prev) => prev + input);
+    };
 
-			resetElement.classList.add('rotate');
-			resetElement.classList.remove('enabled');
-			resetElement.classList.add('disabled');
+    const resetHandler = () => {
+        if (isAnimating) {
+            return;
+        }
+        const resetElement = document.getElementById('reset-button');
+        if (resetElement) {
+            if (resetElement.className === 'reset-button disabled') {
+                return;
+            }
 
-			setSecret((prev) => getRandomSecret(randomizerArray));
-			setInput('');
-			setLockState('default');
-			setIsAnimating((prev) => true);
-		}
-		setTimeout(() => {
-			resetElement?.classList.remove('rotate');
-			resetElement?.classList.remove('disabled');
-			setIsAnimating((prev) => false);
-		}, 5000);
-	};
+            resetElement.classList.add('rotate');
+            resetElement.classList.remove('enabled');
+            resetElement.classList.add('disabled');
 
-	if (lockState === 'open') {
-		return (
-			<div className='content'>
-				<h1 className='tab-title'>Contact</h1>
-				<Lock
-					secret={secret}
-					input={input}
-					lockState={lockState}
-					setLockState={setLockState}
-					success={true}
-				/>
-				<Unlocker secret={secret} addInput={addInput} success={true} />
-				<div className='contact-container'></div>
-			</div>
-		);
-	}
+            setSecret((prev) => getRandomSecret(randomizerArray));
+            setInput('');
+            setLockState('default');
+            setIsAnimating((prev) => true);
+        }
+        setTimeout(() => {
+            resetElement?.classList.remove('rotate');
+            resetElement?.classList.remove('disabled');
+            setIsAnimating((prev) => false);
+        }, 5000);
+    };
 
-	return (
-		<div className='content'>
-			<div
-				id='reset-button'
-				className='reset-button disabled'
-				onClick={resetHandler}
-			>
-				⭯
-			</div>
-			<h1 className='tab-title'>Contact</h1>
-			<Lock
-				secret={secret}
-				input={input}
-				lockState={lockState}
-				setLockState={setLockState}
-				success={false}
-			/>
-			<Unlocker secret={secret} addInput={addInput} success={false} />
-		</div>
-	);
+    if (lockState === 'open') {
+        return (
+            <div className='content'>
+                <h1 className='tab-title'>Contact</h1>
+                <Lock
+                    secret={secret}
+                    input={input}
+                    lockState={lockState}
+                    setLockState={setLockState}
+                />
+                <Unlocker
+                    secret={secret}
+                    addInput={addInput}
+                    lockState={lockState}
+                />
+                <div className='contact-container'></div>
+            </div>
+        );
+    }
+
+    return (
+        <div className='content'>
+            <div
+                id='reset-button'
+                className='reset-button disabled'
+                onClick={resetHandler}
+            >
+                ⭯
+            </div>
+            <h1 className='tab-title'>Contact</h1>
+            <Lock
+                secret={secret}
+                input={input}
+                lockState={lockState}
+                setLockState={setLockState}
+            />
+            <Unlocker
+                secret={secret}
+                addInput={addInput}
+                lockState={lockState}
+            />
+        </div>
+    );
 }
