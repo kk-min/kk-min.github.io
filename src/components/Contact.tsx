@@ -87,10 +87,11 @@ export default function Contact() {
 			resetElement.classList.remove('enabled');
 			resetElement.classList.add('disabled');
 
-			const lockElement = document.getElementById('lock');
+			const lockContainerElement = document.getElementById('lock');
+			const lockImageElement = document.getElementById('lock-image');
 			const unlockerElement = document.getElementById('unlocker');
-			if (lockElement) {
-				lockElement.style.removeProperty('display');
+			if (lockContainerElement) {
+				lockContainerElement.style.removeProperty('display');
 			}
 
 			if (unlockerElement) {
@@ -98,9 +99,17 @@ export default function Contact() {
 			}
 
 			setSecret((prev) => getRandomSecret(randomizerArray));
-			setInput('');
-			setLockState('default');
+			setInput((prev) => '');
+			setLockState((prev) => 'default');
 			setIsAnimating((prev) => true);
+
+			if (lockImageElement) {
+				console.log('Resetting lock to initial');
+				lockImageElement.classList.add('initial');
+				setTimeout(() => {
+					lockImageElement.className = 'lock';
+				}, 1000);
+			}
 		}
 		setTimeout(() => {
 			resetElement?.classList.remove('rotate');

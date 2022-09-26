@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import padlock_default from '../assets/padlock_default.png';
 import padlock_open from '../assets/padlock_open.png';
 import padlock_error from '../assets/padlock_error.png';
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 
 export interface PropTypes {
 	secret: string;
@@ -11,6 +12,8 @@ export interface PropTypes {
 }
 
 export default function Lock(props: PropTypes) {
+	const [firstRender, setFirstRender] = useState(true);
+
 	const defaultLock = useMemo(() => {
 		return padlock_default;
 	}, []);
@@ -23,7 +26,15 @@ export default function Lock(props: PropTypes) {
 		return padlock_error;
 	}, []);
 
-	useEffect(() => {}, [props.lockState]);
+	useEffect(() => {
+		setTimeout(() => {
+			setFirstRender((prev) => false);
+		}, 1000);
+	}, []);
+
+	useEffect(() => {
+		setFirstRender((prev) => true);
+	}, [props.lockState]);
 
 	const onClickHandler = () => {
 		const lockElement = document.getElementById('lock-image');
@@ -62,6 +73,8 @@ export default function Lock(props: PropTypes) {
 						? '-exit'
 						: props.lockState === 'error'
 						? '-failed'
+						: firstRender
+						? ' initial'
 						: '')
 				}
 				src={

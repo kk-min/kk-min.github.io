@@ -348,6 +348,21 @@ li::marker {
 	justify-content: center;
 }
 
+.initial {
+	animation-name: slamdown;
+	animation-duration: 1s;
+	cursor: default;
+}
+
+@keyframes slamdown {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
 .lock {
 	width: 15vw;
 }
@@ -478,16 +493,16 @@ li::marker {
 
 .unlocker-item {
 	outline: 3px solid var(--tab-highlight-color);
-	width: 3rem;
-	height: 3rem;
+	width: 3.5vw;
+	height: 3.5vw;
 	margin-top: 5vh;
 }
 
 .unlocker-item-filled {
 	background-color: var(--tab-highlight-color);
 	outline: 3px solid var(--tab-highlight-color);
-	width: 3rem;
-	height: 3rem;
+	width: 3.5vw;
+	height: 3.5vw;
 	margin-top: 5vh;
 	cursor: default;
 }
