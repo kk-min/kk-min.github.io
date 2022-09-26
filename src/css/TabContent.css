@@ -8,7 +8,7 @@
 }
 
 .content-container {
-	margin-top: 12vh;
+	margin-top: 10vh;
 	width: 100%;
 }
 .intro-container {
@@ -128,7 +128,6 @@
 	display: flex;
 	align-items: center;
 	text-align: center;
-	gap: 1rem;
 }
 
 .tab-title {
@@ -149,16 +148,15 @@
 	color: var(--font-highlight-color);
 }
 
-.github-logo {
+.logo {
 	height: 50px;
 	width: 50px;
 	object-fit: contain;
-	margin: 0 10px;
-	animation-name: github-logo-grow;
+	animation-name: logo-grow;
 	animation-duration: 1s;
 }
 
-@keyframes github-logo-grow {
+@keyframes logo-grow {
 	0% {
 		transform: scale(0);
 	}
@@ -171,7 +169,7 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	margin-top: 10vh;
+	margin-top: auto;
 	gap: 2.5rem;
 	flex-wrap: wrap;
 	animation-name: slide-in;
@@ -294,7 +292,7 @@
 		transform: translateY(0);
 	}
 	50% {
-		transform: translateY(-10px);
+		transform: translateY(-3px);
 	}
 	100% {
 		transform: translateY(0);

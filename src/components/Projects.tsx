@@ -14,7 +14,7 @@ export default function Projects() {
 	const githubLogo = useMemo(() => {
 		return (
 			<img
-				className='github-logo'
+				className='logo'
 				src={github_logo}
 				alt='Github'
 				title='Github'
@@ -29,14 +29,16 @@ export default function Projects() {
 		return (
 			<div className='content'>
 				<div className='title-container'>
-					<h1 className='tab-title'>Projects</h1>
-					<a
-						href='https://github.com/kk-min'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						{githubLogo}
-					</a>
+					<h1 className='tab-title'>
+						Projects
+						<a
+							href='https://github.com/kk-min'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							{githubLogo}
+						</a>
+					</h1>
 				</div>
 				<div className='card-container'>
 					<ItemCard
@@ -82,7 +84,12 @@ export default function Projects() {
 				</div>
 				<div className='title-container'>
 					<h1 className='tab-title'>
-						Frontend <img src={web} style={{ height: '6vh' }} />
+						Frontend{' '}
+						<img
+							className='logo'
+							src={web}
+							style={{ height: '7vh', paddingTop: '5px' }}
+						/>
 					</h1>
 				</div>
 				{project_data.frontend.map((data) => {
@@ -110,7 +117,12 @@ export default function Projects() {
 				</div>
 				<div className='title-container'>
 					<h1 className='tab-title'>
-						Backend <img src={gears} style={{ height: '6vh' }} />
+						Backend{' '}
+						<img
+							className='logo'
+							src={gears}
+							style={{ height: '8vh' }}
+						/>
 					</h1>
 				</div>
 				{project_data.backend.map((data) => {
@@ -139,7 +151,11 @@ export default function Projects() {
 				<div className='title-container'>
 					<h1 className='tab-title'>
 						Miscellaneous{' '}
-						<img src={pencil_case} style={{ height: '6vh' }} />
+						<img
+							className='logo'
+							src={pencil_case}
+							style={{ height: '8vh' }}
+						/>
 					</h1>
 				</div>
 				{project_data.miscellaneous.map((data) => {
