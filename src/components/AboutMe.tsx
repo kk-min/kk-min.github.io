@@ -40,7 +40,11 @@ export default function AboutMe(props: PropTypes) {
 				during playtime. When I was in highschool, I was deeply enamored
 				by music and the creative process behind composition, and the
 				way{' '}
-				<a href='https://en.wikipedia.org/wiki/Digital_audio_workstation'>
+				<a
+					href='https://en.wikipedia.org/wiki/Digital_audio_workstation'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
 					software augments it.
 				</a>{' '}
 				This eventually led me to study Computer Science and learn
