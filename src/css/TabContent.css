@@ -64,7 +64,6 @@
     flex-direction: column;
     animation-name: content-pop;
     animation-duration: 0.5s;
-    height: 100%;
 }
 
 .empty-content {
