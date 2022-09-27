@@ -3,7 +3,7 @@
 	--secondary-bg-color: #fff9f0;
 	--tab-highlight-color: #007ef1;
 	--font-highlight-color: #f17300;
-	--body-text-color: #2d4e96;
+	--body-text-color: #192c56;
 	--secondary-font-color: #919191;
 }
 
@@ -63,4 +63,17 @@ body {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
+}
+
+a:link {
+	color: var(--tab-highlight-color);
+}
+
+a:hover {
+	color: var(--font-highlight-color);
+}
+
+a:visited {
+	color: var(--font-highlight-color);
+	text-decoration: underline;
 }
