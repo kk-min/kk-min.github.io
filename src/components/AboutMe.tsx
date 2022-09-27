@@ -60,8 +60,8 @@ export default function AboutMe(props: PropTypes) {
                 I have experience in both Frontend (Reactjs,
                 Javascript/Typescript, CSS) and Backend (Anroid development,
                 Java, Kotlin, C/C++) experience as well as scripting (Python,
-                VBA). I'm also always looking out to learn and explore new
-                technologiesl; see Projects for more details.
+                VBA); see Projects for more details. I'm also always looking out
+                to learn and explore new technologies!
                 <br />
                 <br />
                 If you have an idea for which you think we can collaborate and
