@@ -1,5 +1,4 @@
 import React, { useMemo } from 'react';
-import { getParseTreeNode } from 'typescript';
 import github_logo from '../assets/github_logo.png';
 import { ItemCard } from './ItemCard';
 import web from '../assets/web.png';
@@ -20,7 +19,7 @@ export default function Projects() {
 				title='Github'
 			/>
 		);
-	}, [github_logo]);
+	}, []);
 
 	// Hide horizontal scrollbar:
 	document.body.style.overflowX = 'hidden';
@@ -89,6 +88,7 @@ export default function Projects() {
 							className='logo'
 							src={web}
 							style={{ height: '7vh', paddingTop: '5px' }}
+							alt='Frontend'
 						/>
 					</h1>
 				</div>
@@ -124,6 +124,7 @@ export default function Projects() {
 							className='logo'
 							src={gears}
 							style={{ height: '8vh' }}
+							alt='Backend'
 						/>
 					</h1>
 				</div>
@@ -159,6 +160,7 @@ export default function Projects() {
 							className='logo'
 							src={pencil_case}
 							style={{ height: '8vh' }}
+							alt='Miscellaneous'
 						/>
 					</h1>
 				</div>

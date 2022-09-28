@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { ItemCard } from './ItemCard';
 import Lock from './Lock';
 import ProjectItem from './ProjectItem';
 import Unlocker from './Unlocker';
@@ -60,7 +59,7 @@ export default function Contact() {
 				resetElement.className = 'reset-button enabled';
 			}
 		}
-	}, [isAnimating]);
+	}, [isAnimating, lockState]);
 
 	const addInput = (input: string) => {
 		setInput((prev) => prev + input);

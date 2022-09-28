@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 import padlock_default from '../assets/padlock_default.png';
 import padlock_open from '../assets/padlock_open.png';
 import padlock_error from '../assets/padlock_error.png';
-import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript';
 
 export interface PropTypes {
 	secret: string;
@@ -60,7 +59,7 @@ export default function Lock(props: PropTypes) {
 		<div
 			id='lock'
 			className={
-				props.lockState == 'open'
+				props.lockState === 'open'
 					? 'lock-container-exit'
 					: 'lock-container'
 			}
@@ -85,6 +84,7 @@ export default function Lock(props: PropTypes) {
 						: errorLock
 				}
 				onClick={onClickHandler}
+				alt='lock'
 			></img>
 		</div>
 	);
