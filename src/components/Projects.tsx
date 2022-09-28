@@ -92,18 +92,20 @@ export default function Projects() {
 						/>
 					</h1>
 				</div>
-				{project_data.frontend.map((data) => {
-					return (
-						<ProjectItem
-							projectTitle={data.name}
-							projectDescription={data.description}
-							projectIcon={data.icon}
-							projectRole={data.subheader}
-							projectLink={data.link}
-							projectBulletPoints={data.bulletpoints}
-						/>
-					);
-				})}
+				<div className='projects-container'>
+					{project_data.frontend.map((data) => {
+						return (
+							<ProjectItem
+								projectTitle={data.name}
+								projectDescription={data.description}
+								projectIcon={data.icon}
+								projectRole={data.subheader}
+								projectLink={data.link}
+								projectBulletPoints={data.bulletpoints}
+							/>
+						);
+					})}
+				</div>
 			</div>
 		);
 	} else if (selection === 'backend') {
@@ -125,18 +127,20 @@ export default function Projects() {
 						/>
 					</h1>
 				</div>
-				{project_data.backend.map((data) => {
-					return (
-						<ProjectItem
-							projectTitle={data.name}
-							projectDescription={data.description}
-							projectIcon={data.icon}
-							projectRole={data.subheader}
-							projectLink={data.link}
-							projectBulletPoints={data.bulletpoints}
-						/>
-					);
-				})}
+				<div className='projects-container'>
+					{project_data.backend.map((data) => {
+						return (
+							<ProjectItem
+								projectTitle={data.name}
+								projectDescription={data.description}
+								projectIcon={data.icon}
+								projectRole={data.subheader}
+								projectLink={data.link}
+								projectBulletPoints={data.bulletpoints}
+							/>
+						);
+					})}
+				</div>
 			</div>
 		);
 	} else if (selection === 'miscellaneous') {
@@ -158,18 +162,20 @@ export default function Projects() {
 						/>
 					</h1>
 				</div>
-				{project_data.miscellaneous.map((data) => {
-					return (
-						<ProjectItem
-							projectTitle={data.name}
-							projectDescription={data.description}
-							projectIcon={data.icon}
-							projectRole={data.subheader}
-							projectLink={data.link}
-							projectBulletPoints={data.bulletpoints}
-						/>
-					);
-				})}
+				<div className='projects-container'>
+					{project_data.miscellaneous.map((data) => {
+						return (
+							<ProjectItem
+								projectTitle={data.name}
+								projectDescription={data.description}
+								projectIcon={data.icon}
+								projectRole={data.subheader}
+								projectLink={data.link}
+								projectBulletPoints={data.bulletpoints}
+							/>
+						);
+					})}
+				</div>
 			</div>
 		);
 	} else {
