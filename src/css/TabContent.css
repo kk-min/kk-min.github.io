@@ -170,8 +170,8 @@
 
 .card-container {
 	display: flex;
-	justify-content: center;
-	align-content: space-between;
+	justify-content: space-evenly;
+	align-content: space-evenly;
 	height: 100%;
 	margin-top: 3vh;
 	gap: 2.5rem;
@@ -196,7 +196,7 @@
 	padding: 15px;
 	border: 3px solid var(--tab-highlight-color);
 	border-radius: 5px;
-	margin: 5vh;
+	margin: 0;
 	margin-top: 0;
 	margin-bottom: 0;
 	text-align: center;
@@ -572,6 +572,17 @@ li::marker {
 }
 
 @media (max-width: 1279px) {
+	.lock,
+	.lock-exit,
+	.lock-failed {
+		width: 35vw;
+	}
+
+	.unlocker-item,
+	.unlocker-item-filled {
+		width: 8vw;
+		height: 8vw;
+	}
 }
 
 @media (max-width: 724px) {
@@ -581,9 +592,15 @@ li::marker {
 	.arrow {
 		font-size: 2rem;
 	}
+	.lock {
+		width: 50vw;
+	}
 }
 
 @media (max-width: 562px) {
+	.lock {
+		width: 50vw;
+	}
 }
 
 @media (max-width: 360px) {
