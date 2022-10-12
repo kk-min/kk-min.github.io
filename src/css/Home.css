@@ -1,51 +1,87 @@
 :root {
-    --main-bg-color: #edfaff;
-    --secondary-bg-color: #edfaff;
-    --tab-highlight-color: #007ef1;
-    --font-highlight-color: #f17300;
-    --body-text-color: #192c56;
-    --secondary-font-color: #919191;
+	--main-bg-color: #edfaff;
+	--secondary-bg-color: #edfaff;
+	--tab-highlight-color: #007ef1;
+	--font-highlight-color: #f17300;
+	--body-text-color: #192c56;
+	--secondary-font-color: #919191;
 }
 
 .home-container {
-    display: flex;
-    justify-content: center;
-    background: var(--main-bg-color);
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
+	display: flex;
+	justify-content: center;
+	background: var(--main-bg-color);
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
 }
 
 .welcome-message {
-    position: fixed;
-    top: 35vh;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    animation-name: welcome;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
+	position: fixed;
+	top: 35vh;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	animation-name: welcome;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
 }
 
 @keyframes welcome {
-    0% {
-        opacity: 0;
-        font-size: 5em;
-        color: var(--tab-highlight-color);
-    }
-    30% {
-        opacity: 1;
-        font-size: 5em;
-        color: lightcoral;
-    }
-    75% {
-        opacity: 1;
-        font-size: 5em;
-        color: var(--font-highlight-color);
-    }
-    100% {
-        font-size: 0px;
-        color: var(--font-highlight-color);
-    }
+	0% {
+		opacity: 0;
+		font-size: 5em;
+		color: var(--tab-highlight-color);
+	}
+	30% {
+		opacity: 1;
+		font-size: 5em;
+		color: lightcoral;
+	}
+	75% {
+		opacity: 1;
+		font-size: 5em;
+		color: var(--font-highlight-color);
+	}
+	100% {
+		font-size: 0px;
+		color: var(--font-highlight-color);
+	}
+}
+
+@media (max-width: 1279px) {
+}
+
+@media (max-width: 724px) {
+	.welcome-message {
+		font-size: 2rem;
+	}
+	@keyframes welcome {
+		0% {
+			opacity: 0;
+			font-size: 3em;
+			color: var(--tab-highlight-color);
+		}
+		30% {
+			opacity: 1;
+			font-size: 3em;
+			color: lightcoral;
+		}
+		75% {
+			opacity: 1;
+			font-size: 3em;
+			color: var(--font-highlight-color);
+		}
+		100% {
+			font-size: 0px;
+			color: var(--font-highlight-color);
+		}
+	}
+}
+
+@media (max-width: 562px) {
+}
+
+@media (max-width: 360px) {
 }

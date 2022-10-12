@@ -75,12 +75,6 @@ export default function Projects() {
 	} else if (selection === 'frontend') {
 		return (
 			<div className='content'>
-				<div
-					className='back-button'
-					onClick={() => setSelection('all')}
-				>
-					⮌
-				</div>
 				<div className='title-container'>
 					<h1 className='tab-title'>
 						Frontend{' '}
@@ -91,6 +85,12 @@ export default function Projects() {
 							alt='Frontend'
 						/>
 					</h1>
+				</div>
+				<div
+					className='back-button'
+					onClick={() => setSelection('all')}
+				>
+					⮌
 				</div>
 				<div className='projects-container'>
 					{project_data.frontend.map((data) => {
@@ -111,12 +111,6 @@ export default function Projects() {
 	} else if (selection === 'backend') {
 		return (
 			<div className='content'>
-				<div
-					className='back-button'
-					onClick={() => setSelection('all')}
-				>
-					⮌
-				</div>
 				<div className='title-container'>
 					<h1 className='tab-title'>
 						Backend{' '}
@@ -127,6 +121,12 @@ export default function Projects() {
 							alt='Backend'
 						/>
 					</h1>
+				</div>
+				<div
+					className='back-button'
+					onClick={() => setSelection('all')}
+				>
+					⮌
 				</div>
 				<div className='projects-container'>
 					{project_data.backend.map((data) => {
@@ -147,12 +147,6 @@ export default function Projects() {
 	} else if (selection === 'miscellaneous') {
 		return (
 			<div className='content'>
-				<div
-					className='back-button'
-					onClick={() => setSelection('all')}
-				>
-					⮌
-				</div>
 				<div className='title-container'>
 					<h1 className='tab-title'>
 						Miscellaneous{' '}
@@ -163,6 +157,12 @@ export default function Projects() {
 							alt='Miscellaneous'
 						/>
 					</h1>
+				</div>
+				<div
+					className='back-button'
+					onClick={() => setSelection('all')}
+				>
+					⮌
 				</div>
 				<div className='projects-container'>
 					{project_data.miscellaneous.map((data) => {

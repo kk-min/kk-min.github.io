@@ -97,16 +97,20 @@
 	.tabheaderactive {
 		font-size: 10px;
 	}
+	.tabslogo {
+		max-width: 100px;
+	}
 }
 
 @media (max-width: 562px) {
 	.tabheader {
 		font-size: 10px;
-		padding: 1px 5px 1px 5px;
+		padding: 1px 15px 1px 15px;
 	}
 	.tabheaderactive {
 		font-size: 10px;
-		padding: 1px 5px 1px 5px;
+		padding: 0px 15px 1px 15px;
+		border-top: 2px solid var(--tab-highlight-color);
 	}
 	.tabsfiller {
 		justify-content: center;
@@ -116,16 +120,11 @@
 @media (max-width: 360px) {
 	.tabheader {
 		font-size: 10px;
-		padding: 1px 5px 1px 5px;
 	}
 	.tabheaderactive {
 		font-size: 10px;
-		padding: 1px 5px 1px 5px;
-	}
-	.tabsfiller {
-		justify-content: left;
 	}
 	.tabslogo {
-		margin-left: 5vh;
+		max-width: 65px;
 	}
 }

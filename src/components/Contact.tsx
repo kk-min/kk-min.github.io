@@ -119,14 +119,16 @@ export default function Contact() {
 
 	return (
 		<div className='content'>
-			<div
-				id='reset-button'
-				className='reset-button disabled'
-				onClick={resetHandler}
-			>
-				⭯
+			<div className='title-container'>
+				<h1 className='tab-title'>Contact</h1>
+				<div
+					id='reset-button'
+					className='reset-button disabled'
+					onClick={resetHandler}
+				>
+					⭯
+				</div>
 			</div>
-			<h1 className='tab-title'>Contact</h1>
 			<Lock
 				secret={secret}
 				input={input}
