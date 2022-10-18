@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import github_logo from '../assets/github_logo.png';
 import { ItemCard } from './ItemCard';
 import web from '../assets/web.png';
@@ -10,6 +10,10 @@ import return_arrow from '../assets/return_arrow.png';
 
 export default function Projects() {
 	const [selection, setSelection] = React.useState('all');
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [selection]);
 
 	const githubLogo = useMemo(() => {
 		return (
@@ -24,8 +28,6 @@ export default function Projects() {
 
 	// Hide horizontal scrollbar:
 	document.body.style.overflowX = 'hidden';
-	// Scroll to top:
-	window.scrollTo(0, 0);
 
 	if (selection === 'all') {
 		return (
@@ -48,25 +50,27 @@ export default function Projects() {
 						itemName='Frontend'
 						bodyText='Web development'
 						bottomText='React, TypeScript, Javascript, CSS'
-						onClickHandler={() =>
-							setSelection((prev) => 'frontend')
-						}
+						onClickHandler={() => {
+							setSelection((prev) => 'frontend');
+						}}
 					/>
 					<ItemCard
 						image={gears}
 						itemName='Backend'
 						bodyText='Android / Database / Networking'
 						bottomText='Java, Kotlin, C/C++'
-						onClickHandler={() => setSelection((prev) => 'backend')}
+						onClickHandler={() => {
+							setSelection((prev) => 'backend');
+						}}
 					/>
 					<ItemCard
 						image={pencil_case}
 						itemName='Miscellaneous'
 						bodyText='Bits and pieces'
 						bottomText='Python, VBA'
-						onClickHandler={() =>
-							setSelection((prev) => 'miscellaneous')
-						}
+						onClickHandler={() => {
+							setSelection((prev) => 'miscellaneous');
+						}}
 					/>
 					<div className='project-footer'>
 						For a full resume/CV, please reach me via the Contact
@@ -94,6 +98,7 @@ export default function Projects() {
 						className='back-button'
 						onClick={() => setSelection('all')}
 						src={return_arrow}
+						alt='back'
 					/>
 				</div>
 				<div className='projects-container'>
@@ -131,6 +136,7 @@ export default function Projects() {
 						className='back-button'
 						onClick={() => setSelection('all')}
 						src={return_arrow}
+						alt='back'
 					/>
 				</div>
 				<div className='projects-container'>
@@ -168,6 +174,7 @@ export default function Projects() {
 						className='back-button'
 						onClick={() => setSelection('all')}
 						src={return_arrow}
+						alt='back'
 					/>
 				</div>
 				<div className='projects-container'>

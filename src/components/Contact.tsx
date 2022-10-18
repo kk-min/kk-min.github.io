@@ -127,6 +127,7 @@ export default function Contact() {
 					className='reset-button disabled'
 					onClick={resetHandler}
 					src={reset_arrow}
+					alt='reset'
 				/>
 			</div>
 			<Lock
