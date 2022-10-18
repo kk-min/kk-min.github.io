@@ -74,6 +74,7 @@ export default function Projects() {
 			</div>
 		);
 	} else if (selection === 'frontend') {
+		window.scroll(0, 0);
 		return (
 			<div className='content'>
 				<div className='title-container'>
@@ -111,6 +112,7 @@ export default function Projects() {
 			</div>
 		);
 	} else if (selection === 'backend') {
+		window.scroll(0, 0);
 		return (
 			<div className='content'>
 				<div className='title-container'>
@@ -148,6 +150,7 @@ export default function Projects() {
 			</div>
 		);
 	} else if (selection === 'miscellaneous') {
+		window.scroll(0, 0);
 		return (
 			<div className='content'>
 				<div className='title-container'>
