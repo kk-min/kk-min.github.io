@@ -6,6 +6,7 @@ import gears from '../assets/gears.png';
 import pencil_case from '../assets/pencil_case.png';
 import ProjectItem from './ProjectItem';
 import project_data from '../data/project_data.json';
+import return_arrow from '../assets/return_arrow.png';
 
 export default function Projects() {
 	const [selection, setSelection] = React.useState('all');
@@ -86,11 +87,12 @@ export default function Projects() {
 						/>
 					</h1>
 				</div>
-				<div
-					className='back-button'
-					onClick={() => setSelection('all')}
-				>
-					⮌
+				<div className='back-button-container'>
+					<img
+						className='back-button'
+						onClick={() => setSelection('all')}
+						src={return_arrow}
+					/>
 				</div>
 				<div className='projects-container'>
 					{project_data.frontend.map((data) => {
@@ -122,11 +124,12 @@ export default function Projects() {
 						/>
 					</h1>
 				</div>
-				<div
-					className='back-button'
-					onClick={() => setSelection('all')}
-				>
-					⮌
+				<div className='back-button-container'>
+					<img
+						className='back-button'
+						onClick={() => setSelection('all')}
+						src={return_arrow}
+					/>
 				</div>
 				<div className='projects-container'>
 					{project_data.backend.map((data) => {
@@ -158,11 +161,12 @@ export default function Projects() {
 						/>
 					</h1>
 				</div>
-				<div
-					className='back-button'
-					onClick={() => setSelection('all')}
-				>
-					⮌
+				<div className='back-button-container'>
+					<img
+						className='back-button'
+						onClick={() => setSelection('all')}
+						src={return_arrow}
+					/>
 				</div>
 				<div className='projects-container'>
 					{project_data.miscellaneous.map((data) => {

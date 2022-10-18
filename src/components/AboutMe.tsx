@@ -1,4 +1,5 @@
 import React from 'react';
+import down_arrow from '../assets/down_arrow.png';
 
 export interface PropTypes {
 	firstRender: boolean;
@@ -36,7 +37,7 @@ export default function AboutMe(props: PropTypes) {
 				</h1>
 
 				<button className='down-button' onClick={scrollHandler}>
-					<b className='arrow'>🡳</b>
+					<img className='arrow' src={down_arrow} />
 				</button>
 			</div>
 			<div className='about-me-content' id='about-me-content'>

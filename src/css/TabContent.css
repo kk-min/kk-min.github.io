@@ -30,6 +30,7 @@
 .arrow {
 	color: var(--tab-highlight-color);
 	font-size: 50px;
+	width: 50px;
 }
 
 .down-button {
@@ -237,17 +238,23 @@
 	color: var(--tab-highlight-color);
 }
 
-.back-button {
+.back-button-container {
 	position: absolute;
 	z-index: 0;
 	right: 0;
+	margin-top: 5vh;
 	margin-right: 10vh;
+}
+
+.back-button {
+	width: 50px;
 	color: var(--tab-highlight-color);
 	font-size: 3rem;
 	cursor: pointer;
 }
 
 .reset-button {
+	width: 45px;
 	position: absolute;
 	z-index: 0;
 	right: 0;
@@ -619,7 +626,7 @@ li::marker {
 	}
 
 	.reset-button {
-		font-size: 2.5rem;
+		margin: 0 20px 0 0;
 	}
 
 	.lock {
@@ -644,6 +651,15 @@ li::marker {
 		height: 10vw;
 	}
 
+	.title-container {
+		margin-top: 1.5rem;
+		justify-content: space-around;
+	}
+
+	.tab-title {
+		margin: 0;
+	}
+
 	.project-title {
 		font-size: 1.5rem;
 	}
@@ -653,11 +669,10 @@ li::marker {
 		margin-left: 5vw;
 		margin-right: 5vw;
 	}
-
-	.back-button {
+	.back-button-container {
 		position: relative;
+		margin: 0;
 		display: flex;
 		justify-content: center;
-		margin: 0;
 	}
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Lock from './Lock';
 import ProjectItem from './ProjectItem';
 import Unlocker from './Unlocker';
+import reset_arrow from '../assets/reset_arrow.png';
 
 const randomizerArray = ['1', '2', '3', '4'];
 
@@ -121,13 +122,12 @@ export default function Contact() {
 		<div className='content'>
 			<div className='title-container'>
 				<h1 className='tab-title'>Contact</h1>
-				<div
+				<img
 					id='reset-button'
 					className='reset-button disabled'
 					onClick={resetHandler}
-				>
-					⭯
-				</div>
+					src={reset_arrow}
+				/>
 			</div>
 			<Lock
 				secret={secret}
