@@ -18,7 +18,7 @@ export default function TabHeaders(props: PropTypes) {
 		if (firstTab !== null) {
 			firstTab.className = 'tabheaderactive';
 		}
-	}, [tabNames]);
+	}, [tabNames, props.activeTab, props.tabNames]);
 
 	// onClick function for when a tab is clicked:
 	const tabClickHandler = (event: React.MouseEvent, tabname: string) => {
@@ -47,13 +47,22 @@ export default function TabHeaders(props: PropTypes) {
 					id={name}
 					key={name}
 					className='tabheader'
-					onClick={(event) => tabClickHandler(event, name)}
+					onClick={
+						name === 'Blog'
+							? () => {
+									window.open(
+										'https://kkmin.vercel.app',
+										'_blank'
+									);
+							  }
+							: (event) => tabClickHandler(event, name)
+					}
 				>
 					{name}
 				</button>
 			))}
 			<div className='tabsfiller'>
-				<img className='tabslogo' src={kkminlogo_light} />
+				<img className='tabslogo' src={kkminlogo_light} alt='KK Min' />
 			</div>
 		</div>
 	);
