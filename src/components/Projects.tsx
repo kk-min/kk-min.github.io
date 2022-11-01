@@ -1,5 +1,4 @@
-import React, { useMemo } from 'react';
-import { getParseTreeNode } from 'typescript';
+import React, { useEffect, useMemo } from 'react';
 import github_logo from '../assets/github_logo.png';
 import { ItemCard } from './ItemCard';
 import web from '../assets/web.png';
@@ -7,9 +6,14 @@ import gears from '../assets/gears.png';
 import pencil_case from '../assets/pencil_case.png';
 import ProjectItem from './ProjectItem';
 import project_data from '../data/project_data.json';
+import return_arrow from '../assets/return_arrow.png';
 
 export default function Projects() {
 	const [selection, setSelection] = React.useState('all');
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [selection]);
 
 	const githubLogo = useMemo(() => {
 		return (
@@ -20,7 +24,7 @@ export default function Projects() {
 				title='Github'
 			/>
 		);
-	}, [github_logo]);
+	}, []);
 
 	// Hide horizontal scrollbar:
 	document.body.style.overflowX = 'hidden';
@@ -46,25 +50,27 @@ export default function Projects() {
 						itemName='Frontend'
 						bodyText='Web development'
 						bottomText='React, TypeScript, Javascript, CSS'
-						onClickHandler={() =>
-							setSelection((prev) => 'frontend')
-						}
+						onClickHandler={() => {
+							setSelection((prev) => 'frontend');
+						}}
 					/>
 					<ItemCard
 						image={gears}
 						itemName='Backend'
 						bodyText='Android / Database / Networking'
 						bottomText='Java, Kotlin, C/C++'
-						onClickHandler={() => setSelection((prev) => 'backend')}
+						onClickHandler={() => {
+							setSelection((prev) => 'backend');
+						}}
 					/>
 					<ItemCard
 						image={pencil_case}
 						itemName='Miscellaneous'
 						bodyText='Bits and pieces'
 						bottomText='Python, VBA'
-						onClickHandler={() =>
-							setSelection((prev) => 'miscellaneous')
-						}
+						onClickHandler={() => {
+							setSelection((prev) => 'miscellaneous');
+						}}
 					/>
 					<div className='project-footer'>
 						For a full resume/CV, please reach me via the Contact
@@ -76,12 +82,6 @@ export default function Projects() {
 	} else if (selection === 'frontend') {
 		return (
 			<div className='content'>
-				<div
-					className='back-button'
-					onClick={() => setSelection('all')}
-				>
-					⮌
-				</div>
 				<div className='title-container'>
 					<h1 className='tab-title'>
 						Frontend{' '}
@@ -89,32 +89,37 @@ export default function Projects() {
 							className='logo'
 							src={web}
 							style={{ height: '7vh', paddingTop: '5px' }}
+							alt='Frontend'
 						/>
 					</h1>
 				</div>
-				{project_data.frontend.map((data) => {
-					return (
-						<ProjectItem
-							projectTitle={data.name}
-							projectDescription={data.description}
-							projectIcon={data.icon}
-							projectRole={data.subheader}
-							projectLink={data.link}
-							projectBulletPoints={data.bulletpoints}
-						/>
-					);
-				})}
+				<div className='back-button-container'>
+					<img
+						className='back-button'
+						onClick={() => setSelection('all')}
+						src={return_arrow}
+						alt='back'
+					/>
+				</div>
+				<div className='projects-container'>
+					{project_data.frontend.map((data) => {
+						return (
+							<ProjectItem
+								projectTitle={data.name}
+								projectDescription={data.description}
+								projectIcon={data.icon}
+								projectRole={data.subheader}
+								projectLink={data.link}
+								projectBulletPoints={data.bulletpoints}
+							/>
+						);
+					})}
+				</div>
 			</div>
 		);
 	} else if (selection === 'backend') {
 		return (
 			<div className='content'>
-				<div
-					className='back-button'
-					onClick={() => setSelection('all')}
-				>
-					⮌
-				</div>
 				<div className='title-container'>
 					<h1 className='tab-title'>
 						Backend{' '}
@@ -122,32 +127,37 @@ export default function Projects() {
 							className='logo'
 							src={gears}
 							style={{ height: '8vh' }}
+							alt='Backend'
 						/>
 					</h1>
 				</div>
-				{project_data.backend.map((data) => {
-					return (
-						<ProjectItem
-							projectTitle={data.name}
-							projectDescription={data.description}
-							projectIcon={data.icon}
-							projectRole={data.subheader}
-							projectLink={data.link}
-							projectBulletPoints={data.bulletpoints}
-						/>
-					);
-				})}
+				<div className='back-button-container'>
+					<img
+						className='back-button'
+						onClick={() => setSelection('all')}
+						src={return_arrow}
+						alt='back'
+					/>
+				</div>
+				<div className='projects-container'>
+					{project_data.backend.map((data) => {
+						return (
+							<ProjectItem
+								projectTitle={data.name}
+								projectDescription={data.description}
+								projectIcon={data.icon}
+								projectRole={data.subheader}
+								projectLink={data.link}
+								projectBulletPoints={data.bulletpoints}
+							/>
+						);
+					})}
+				</div>
 			</div>
 		);
 	} else if (selection === 'miscellaneous') {
 		return (
 			<div className='content'>
-				<div
-					className='back-button'
-					onClick={() => setSelection('all')}
-				>
-					⮌
-				</div>
 				<div className='title-container'>
 					<h1 className='tab-title'>
 						Miscellaneous{' '}
@@ -155,21 +165,32 @@ export default function Projects() {
 							className='logo'
 							src={pencil_case}
 							style={{ height: '8vh' }}
+							alt='Miscellaneous'
 						/>
 					</h1>
 				</div>
-				{project_data.miscellaneous.map((data) => {
-					return (
-						<ProjectItem
-							projectTitle={data.name}
-							projectDescription={data.description}
-							projectIcon={data.icon}
-							projectRole={data.subheader}
-							projectLink={data.link}
-							projectBulletPoints={data.bulletpoints}
-						/>
-					);
-				})}
+				<div className='back-button-container'>
+					<img
+						className='back-button'
+						onClick={() => setSelection('all')}
+						src={return_arrow}
+						alt='back'
+					/>
+				</div>
+				<div className='projects-container'>
+					{project_data.miscellaneous.map((data) => {
+						return (
+							<ProjectItem
+								projectTitle={data.name}
+								projectDescription={data.description}
+								projectIcon={data.icon}
+								projectRole={data.subheader}
+								projectLink={data.link}
+								projectBulletPoints={data.bulletpoints}
+							/>
+						);
+					})}
+				</div>
 			</div>
 		);
 	} else {

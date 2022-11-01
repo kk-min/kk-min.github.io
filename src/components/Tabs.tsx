@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import TabContent from './TabContent';
 import TabHeaders from './TabHeaders';
 
-const tab_names = ['About Me', 'Projects', 'Contact'];
+const tab_names = ['About Me', 'Projects', 'Contact', 'Blog'];
 
 export default function Tabs() {
 	const [activeTab, setActiveTab] = useState(tab_names[0]);

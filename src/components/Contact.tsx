@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { ItemCard } from './ItemCard';
 import Lock from './Lock';
 import ProjectItem from './ProjectItem';
 import Unlocker from './Unlocker';
+import reset_arrow from '../assets/reset_arrow.png';
 
 const randomizerArray = ['1', '2', '3', '4'];
 
@@ -60,7 +60,7 @@ export default function Contact() {
 				resetElement.className = 'reset-button enabled';
 			}
 		}
-	}, [isAnimating]);
+	}, [isAnimating, lockState]);
 
 	const addInput = (input: string) => {
 		setInput((prev) => prev + input);
@@ -120,14 +120,16 @@ export default function Contact() {
 
 	return (
 		<div className='content'>
-			<div
-				id='reset-button'
-				className='reset-button disabled'
-				onClick={resetHandler}
-			>
-				⭯
+			<div className='title-container'>
+				<h1 className='tab-title'>Contact</h1>
+				<img
+					id='reset-button'
+					className='reset-button disabled'
+					onClick={resetHandler}
+					src={reset_arrow}
+					alt='reset'
+				/>
 			</div>
-			<h1 className='tab-title'>Contact</h1>
 			<Lock
 				secret={secret}
 				input={input}
