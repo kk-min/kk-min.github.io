@@ -110,6 +110,17 @@
     ],
     "miscellaneous": [
         {
+            "name": "CSV Analyzer",
+            "subheader": "",
+            "description": "Python web application to quickly visualize CSV data into graphs.",
+            "icon": "",
+            "link": "https://github.com/kk-min/csv-analyzer",
+            "bulletpoints": [
+                "Developed a Python web application with Streamlit to visualize CSV data into graphs",
+                "Implemented State management to allow for dynamic graphing and selection of CSV data"
+            ]
+        },
+        {
             "name": "Bluetooth Server Tester",
             "subheader": "",
             "description": "Python server-side application for testing client-side Bluetooth functionalities.",
