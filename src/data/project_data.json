@@ -168,6 +168,16 @@
             ]
         },
         {
+            "name": "Click On Time",
+            "subheader": "",
+            "description": "A simple python script that simulates an automatic click at a specified time.",
+            "icon": "",
+            "link": "",
+            "bulletpoints": [
+                "Developed script using PyAutoGUI to simulate mouse clicks at a specified times"
+            ]
+        },
+        {
             "name": "Accounting Process and Calculation Automation",
             "subheader": "",
             "description": "Various Python/VBA scripts for automating accounting calculations and processes.",
