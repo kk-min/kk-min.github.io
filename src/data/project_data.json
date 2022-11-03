@@ -130,6 +130,17 @@
                 "Implemented quote history tracking for different stocks",
                 "Adhered to best-practice design principles such as Single Responsibility Principle and Dependency Inversion Principle"
             ]
+        },
+        {
+            "name": "Restaurant Reservation & Point of Sale System",
+            "subheader": "",
+            "description": "Console-based system for managing restaurant orders and reservations.",
+            "icon": "",
+            "link": "",
+            "bulletpoints": [
+                "Developed a console application in Java",
+                "Documented system design with UML diagrams via Visual Paradigm"
+            ]
         }
     ],
     "miscellaneous": [
@@ -167,6 +178,17 @@
                 "Designed user interface for easy usability and user onboarding",
                 "Implemented Python program to interface with Outlook API for automated file downloading and decryption",
                 "Implemented VBA scripts for excel manipulations including custom cross-file data extraction, data validation"
+            ]
+        },
+        {
+            "name": "Mockaroo Automated Data Generation",
+            "subheader": "",
+            "description": "Script design in Ruby via online tool Mockaroo for generation of mock data",
+            "icon": "",
+            "link": "",
+            "bulletpoints": [
+                "Created outline for unique key generation for complex data",
+                "Ensure data continuity across different database tables via sequential table generation to overcome cross table reference limitations"
             ]
         }
     ]
