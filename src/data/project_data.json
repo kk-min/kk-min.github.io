@@ -28,6 +28,19 @@
             ]
         },
         {
+            "name": "Firestore Updater",
+            "subheader": "",
+            "description": "Firebase utility tool for quick visualization and updating of a Firestore database.",
+            "icon": "",
+            "link": "https://github.com/kk-min/firestore-updater",
+            "bulletpoints": [
+                "Designed and developed a utility tool with React and Typescript to monitor and modify Firestore collections through a streamlined frontend user interface",
+                "Implemented dynamic collection resolution based on input collection path",
+                "Implemented dynamic data update based on input label and field values",
+                "Implemented live display of collection documents and fields"
+            ]
+        },
+        {
             "name": "Chat Application Web",
             "subheader": "",
             "description": "Online web application for chatting with Min... if you know the secret!",
@@ -54,6 +67,17 @@
         }
     ],
     "backend": [
+        {
+            "name": "NextJs Blog (Fullstack)",
+            "subheader": "",
+            "description": "Fullstack blog application with NextJs",
+            "icon": "",
+            "link": "https://kkmin.vercel.app",
+            "bulletpoints": [
+                "Developed a full stack web application with NextJs, Javascript and CSS",
+                "Implemented MDX Compiler for seamless integration of Markdown and JSX for blog posts"
+            ]
+        },
         {
             "name": "SGSAFETY - Android Application",
             "subheader": "Team Lead",
