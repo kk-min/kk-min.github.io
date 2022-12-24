@@ -1,205 +1,227 @@
 {
-    "frontend": [
-        {
-            "name": "MediCo",
-            "subheader": "Project Manager  / Team Lead",
-            "description": "Medical consultation web application for remote access to healthcare services with accessibility features for elderly.",
-            "icon": "",
-            "link": "https://github.com/kk-min/medico",
-            "bulletpoints": [
-                "Developed a web application with React framework and Javascript and Firebase as backend",
-                "Managed a team of 6 developers to ensure timely completion and delivery of project",
-                "Designed and implemented application architecture for easy reusability and integration with Firebase's Authentication service",
-                "Implemented live chat feature with Firebase's Firestore database"
-            ]
-        },
-        {
-            "name": "SGSAFETY - Web Application",
-            "subheader": "Team Lead",
-            "description": "Promotional website for SGSafety Android mobile application, a distress signal broadcaster and receiver.",
-            "icon": "",
-            "link": "https://github.com/kk-min/sgsafety-mobile",
-            "bulletpoints": [
-                "Developed a web application with React framework and Javascript to promote SGSAFETY Android mobile application",
-                "Led a team of 6 members through the software development process from planning to deployment",
-                "Managed project timeline with Agile framework, delegated tasks to team members for timely completion",
-                "Integrated cross-platform authentication via Firebase's Authentication service for both web and mobile",
-                "Integrated live AED location map into website via Singapore government’s AED Locations API"
-            ]
-        },
-        {
-            "name": "Firestore Updater",
-            "subheader": "",
-            "description": "Firebase utility tool for quick visualization and updating of a Firestore database.",
-            "icon": "",
-            "link": "https://github.com/kk-min/firestore-updater",
-            "bulletpoints": [
-                "Designed and developed a utility tool with React and Typescript to monitor and modify Firestore collections through a streamlined frontend user interface",
-                "Implemented dynamic collection resolution based on input collection path",
-                "Implemented dynamic data update based on input label and field values",
-                "Implemented live display of collection documents and fields"
-            ]
-        },
-        {
-            "name": "Chat Application Web",
-            "subheader": "",
-            "description": "Online web application for chatting with Min... if you know the secret!",
-            "icon": "",
-            "link": "https://github.com/kk-min/chat-application-web",
-            "bulletpoints": [
-                "Developed a web application with React framework and Javascript",
-                "Built responsive UI with Material UI",
-                "Integrated Firebase Authentication for secret check",
-                "Implemented Firestore database for live chat functinality"
-            ]
-        },
-        {
-            "name": "kk-min.github.io",
-            "subheader": "",
-            "description": "This website!",
-            "icon": "",
-            "link": "https://github.com/kk-min/kk-min.github.io",
-            "bulletpoints": [
-                "Developed a web application with React framework, Typescript and CSS",
-                "Designed and implemented tab-based content navigation",
-                "Designed reusable components from ground up for easy integration into other projects"
-            ]
-        }
-    ],
-    "backend": [
-        {
-            "name": "NextJs Blog (Fullstack)",
-            "subheader": "",
-            "description": "Fullstack blog application with NextJs",
-            "icon": "",
-            "link": "https://kkmin.vercel.app",
-            "bulletpoints": [
-                "Developed a full stack web application with NextJs, Javascript and CSS",
-                "Implemented MDX Compiler for seamless integration of Markdown and JSX for blog posts"
-            ]
-        },
-        {
-            "name": "SGSAFETY - Android Application",
-            "subheader": "Team Lead",
-            "description": "Android mobile application for broadcasting and receiving distress signals.",
-            "icon": "",
-            "link": "https://github.com/kk-min/sgsafety-mobile",
-            "bulletpoints": [
-                "Developed a native Android application in Kotlin with Firebase as remote database",
-                "Managed a team of 5 developers to ensure timely completion and delivery of project",
-                "Spearheaded application architecture design decisions",
-                "Implemented distress signal broadcasting via a distributed computation approach using Firebase Topic Messaging",
-                "Implemented live location trail and map view using OpenStreetMaps API"
-            ]
-        },
-        {
-            "name": "Android Bluetooth Controller Application",
-            "subheader": "Bluetooth Developer",
-            "description": "Android mobile application for controlling and communicating with a Raspberry PI via Bluetooth signals.",
-            "icon": "",
-            "link": "",
-            "bulletpoints": [
-                "Developed a native Android application in Java to provide Bluetooth communication with a Raspberry PI",
-                "Implemented Bluetooth scanning and connection with other devices",
-                "Planned and collaborated signal headers and payloads with Raspberry PI developer for varying communication functionalities",
-                "Assisted GUI Developer in live display of communication status and received data to GUI",
-                "Designed and implemented a 5-attempt Bluetooth reconnection mechanism for consistent and robust connection"
-            ]
-        },
-        {
-            "name": "Chat Application Desktop",
-            "subheader": "",
-            "description": "Desktop Application for chat communication between two clients.",
-            "icon": "",
-            "link": "https://github.com/kk-min/chat-application-desktop",
-            "bulletpoints": [
-                "Developed a desktop application in Java and JavaFX",
-                "Implemented GUI using JavaFX and Model-View-Controller (MVC) framework",
-                "Integrated asnyhronous execution of I/O bound operations for concurrent send/receive operations using Java's CompletableFuture library"
-            ]
-        },
-        {
-            "name": "Stock Exchange System",
-            "subheader": "",
-            "description": "Model of a stock exchange system with price-time order matching.",
-            "icon": "",
-            "link": "https://github.com/kk-min/stock-exchange-system",
-            "bulletpoints": [
-                "Developed a console application in Java",
-                "Implemented price-time order matching system",
-                "Implemented quote history tracking for different stocks",
-                "Adhered to best-practice design principles such as Single Responsibility Principle and Dependency Inversion Principle"
-            ]
-        },
-        {
-            "name": "Restaurant Reservation & Point of Sale System",
-            "subheader": "",
-            "description": "Console-based system for managing restaurant orders and reservations.",
-            "icon": "",
-            "link": "",
-            "bulletpoints": [
-                "Developed a console application in Java",
-                "Documented system design with UML diagrams via Visual Paradigm"
-            ]
-        }
-    ],
-    "miscellaneous": [
-        {
-            "name": "CSV Analyzer",
-            "subheader": "",
-            "description": "Python web application to quickly visualize CSV data into graphs.",
-            "icon": "",
-            "link": "https://github.com/kk-min/csv-analyzer",
-            "bulletpoints": [
-                "Developed a Python web application with Streamlit to visualize CSV data into graphs",
-                "Implemented State management to allow for dynamic graphing and selection of CSV data"
-            ]
-        },
-        {
-            "name": "Bluetooth Server Tester",
-            "subheader": "",
-            "description": "Python server-side application for testing client-side Bluetooth functionalities.",
-            "icon": "",
-            "link": "https://github.com/kk-min/bluetooth-server-tester",
-            "bulletpoints": [
-                "Developed a Python application with and PyBluez library for sending/receiving Bluetooth messages",
-                "Implemented multi-threading for concurrent send/receive operations",
-                "Designed and implemented bluetooth reconnection mechanism via polling and automatic connection reinitiation"
-            ]
-        },
-        {
-            "name": "Click On Time",
-            "subheader": "",
-            "description": "A simple python script that simulates an automatic click at a specified time.",
-            "icon": "",
-            "link": "",
-            "bulletpoints": [
-                "Developed script using PyAutoGUI to simulate mouse clicks at a specified times"
-            ]
-        },
-        {
-            "name": "Accounting Process and Calculation Automation",
-            "subheader": "",
-            "description": "Various Python/VBA scripts for automating accounting calculations and processes.",
-            "icon": "",
-            "link": "",
-            "bulletpoints": [
-                "Developed various Python and VBA scripts for automating accounting processes and calculations",
-                "Designed user interface for easy usability and user onboarding",
-                "Implemented Python program to interface with Outlook API for automated file downloading and decryption",
-                "Implemented VBA scripts for excel manipulations including custom cross-file data extraction, data validation"
-            ]
-        },
-        {
-            "name": "Mockaroo Automated Data Generation",
-            "subheader": "",
-            "description": "Script design in Ruby via online tool Mockaroo for generation of mock data",
-            "icon": "",
-            "link": "",
-            "bulletpoints": [
-                "Created outline for unique key generation for complex data",
-                "Ensure data continuity across different database tables via sequential table generation to overcome cross table reference limitations"
-            ]
-        }
-    ]
+  "frontend": [
+    {
+      "name": "MediCo",
+      "subheader": "Project Manager  / Team Lead",
+      "description": "Medical consultation web application for remote access to healthcare services with accessibility features for elderly.",
+      "icon": "",
+      "link": "https://github.com/kk-min/medico",
+      "bulletpoints": [
+        "Developed a web application with React framework and Javascript and Firebase as backend",
+        "Managed a team of 6 developers to ensure timely completion and delivery of project",
+        "Designed and implemented application architecture for easy reusability and integration with Firebase's Authentication service",
+        "Implemented live chat feature with Firebase's Firestore database"
+      ]
+    },
+    {
+      "name": "SGSAFETY - Web Application",
+      "subheader": "Team Lead",
+      "description": "Promotional website for SGSafety Android mobile application, a distress signal broadcaster and receiver.",
+      "icon": "",
+      "link": "https://github.com/kk-min/sgsafety-mobile",
+      "bulletpoints": [
+        "Developed a web application with React framework and Javascript to promote SGSAFETY Android mobile application",
+        "Led a team of 6 members through the software development process from planning to deployment",
+        "Managed project timeline with Agile framework, delegated tasks to team members for timely completion",
+        "Integrated cross-platform authentication via Firebase's Authentication service for both web and mobile",
+        "Integrated live AED location map into website via Singapore government’s AED Locations API"
+      ]
+    },
+    {
+      "name": "Firestore Updater",
+      "subheader": "",
+      "description": "Firebase utility tool for quick visualization and updating of a Firestore database.",
+      "icon": "",
+      "link": "https://github.com/kk-min/firestore-updater",
+      "bulletpoints": [
+        "Designed and developed a utility tool with React and Typescript to monitor and modify Firestore collections through a streamlined frontend user interface",
+        "Implemented dynamic collection resolution based on input collection path",
+        "Implemented dynamic data update based on input label and field values",
+        "Implemented live display of collection documents and fields"
+      ]
+    },
+    {
+      "name": "Chat Application Web",
+      "subheader": "",
+      "description": "Online web application for chatting with Min... if you know the secret!",
+      "icon": "",
+      "link": "https://github.com/kk-min/chat-application-web",
+      "bulletpoints": [
+        "Developed a web application with React framework and Javascript",
+        "Built responsive UI with Material UI",
+        "Integrated Firebase Authentication for secret check",
+        "Implemented Firestore database for live chat functinality"
+      ]
+    },
+    {
+      "name": "kk-min.github.io",
+      "subheader": "",
+      "description": "This website!",
+      "icon": "",
+      "link": "https://github.com/kk-min/kk-min.github.io",
+      "bulletpoints": [
+        "Developed a web application with React framework, Typescript and CSS",
+        "Designed and implemented tab-based content navigation",
+        "Designed reusable components from ground up for easy integration into other projects"
+      ]
+    },
+    {
+      "name": "Svelte Components",
+      "subheader": "",
+      "description": "Recreation of various elements in this website (originally in React) in Svelte",
+      "icon": "",
+      "link": "",
+      "bulletpoints": [
+        "Developed re-usable components with Sveltekit, Svelte, Typescript and CSS",
+        "Designed and implemented tab-based content navigation",
+        "Designed and implemented lock mini-puzzle"
+      ]
+    }
+  ],
+  "backend": [
+    {
+      "name": "NextJs Blog (Fullstack)",
+      "subheader": "",
+      "description": "Fullstack blog application with NextJs",
+      "icon": "",
+      "link": "https://kkmin.vercel.app",
+      "bulletpoints": [
+        "Developed a full stack web application with NextJs, Javascript and CSS",
+        "Implemented MDX Compiler for seamless integration of Markdown and JSX for blog posts"
+      ]
+    },
+    {
+      "name": "SGSAFETY - Android Application",
+      "subheader": "Team Lead",
+      "description": "Android mobile application for broadcasting and receiving distress signals.",
+      "icon": "",
+      "link": "https://github.com/kk-min/sgsafety-mobile",
+      "bulletpoints": [
+        "Developed a native Android application in Kotlin with Firebase as remote database",
+        "Managed a team of 5 developers to ensure timely completion and delivery of project",
+        "Spearheaded application architecture design decisions",
+        "Implemented distress signal broadcasting via a distributed computation approach using Firebase Topic Messaging",
+        "Implemented live location trail and map view using OpenStreetMaps API"
+      ]
+    },
+    {
+      "name": "Android Bluetooth Controller Application",
+      "subheader": "Bluetooth Developer",
+      "description": "Android mobile application for controlling and communicating with a Raspberry PI via Bluetooth signals.",
+      "icon": "",
+      "link": "",
+      "bulletpoints": [
+        "Developed a native Android application in Java to provide Bluetooth communication with a Raspberry PI",
+        "Implemented Bluetooth scanning and connection with other devices",
+        "Planned and collaborated signal headers and payloads with Raspberry PI developer for varying communication functionalities",
+        "Assisted GUI Developer in live display of communication status and received data to GUI",
+        "Designed and implemented a 5-attempt Bluetooth reconnection mechanism for consistent and robust connection"
+      ]
+    },
+    {
+      "name": "Chat Application Desktop",
+      "subheader": "",
+      "description": "Desktop Application for chat communication between two clients.",
+      "icon": "",
+      "link": "https://github.com/kk-min/chat-application-desktop",
+      "bulletpoints": [
+        "Developed a desktop application in Java and JavaFX",
+        "Implemented GUI using JavaFX and Model-View-Controller (MVC) framework",
+        "Integrated asnyhronous execution of I/O bound operations for concurrent send/receive operations using Java's CompletableFuture library"
+      ]
+    },
+    {
+      "name": "Stock Exchange System",
+      "subheader": "",
+      "description": "Model of a stock exchange system with price-time order matching.",
+      "icon": "",
+      "link": "https://github.com/kk-min/stock-exchange-system",
+      "bulletpoints": [
+        "Developed a console application in Java",
+        "Implemented price-time order matching system",
+        "Implemented quote history tracking for different stocks",
+        "Adhered to best-practice design principles such as Single Responsibility Principle and Dependency Inversion Principle"
+      ]
+    },
+    {
+      "name": "Restaurant Reservation & Point of Sale System",
+      "subheader": "",
+      "description": "Console-based system for managing restaurant orders and reservations.",
+      "icon": "",
+      "link": "",
+      "bulletpoints": [
+        "Developed a console application in Java",
+        "Documented system design with UML diagrams via Visual Paradigm"
+      ]
+    }
+  ],
+  "miscellaneous": [
+    {
+      "name": "CSV Analyzer",
+      "subheader": "",
+      "description": "Python web application to quickly visualize CSV data into graphs.",
+      "icon": "",
+      "link": "https://github.com/kk-min/csv-analyzer",
+      "bulletpoints": [
+        "Developed a Python web application with Streamlit to visualize CSV data into graphs",
+        "Implemented State management to allow for dynamic graphing and selection of CSV data"
+      ]
+    },
+    {
+      "name": "Bluetooth Server Tester",
+      "subheader": "",
+      "description": "Python server-side application for testing client-side Bluetooth functionalities.",
+      "icon": "",
+      "link": "https://github.com/kk-min/bluetooth-server-tester",
+      "bulletpoints": [
+        "Developed a Python application with and PyBluez library for sending/receiving Bluetooth messages",
+        "Implemented multi-threading for concurrent send/receive operations",
+        "Designed and implemented bluetooth reconnection mechanism via polling and automatic connection reinitiation"
+      ]
+    },
+    {
+      "name": "Click On Time",
+      "subheader": "",
+      "description": "A simple python script that simulates an automatic click at a specified time.",
+      "icon": "",
+      "link": "",
+      "bulletpoints": [
+        "Developed script using PyAutoGUI to simulate mouse clicks at a specified times"
+      ]
+    },
+    {
+      "name": "Python File Renamer",
+      "subheader": "",
+      "description": "A simple python script that renames files in batches.",
+      "icon": "",
+      "link": "",
+      "bulletpoints": [
+        "Developed script to iterate directories and rename files in batches via Regex"
+      ]
+    },
+    {
+      "name": "Accounting Process and Calculation Automation",
+      "subheader": "",
+      "description": "Various Python/VBA scripts for automating accounting calculations and processes.",
+      "icon": "",
+      "link": "",
+      "bulletpoints": [
+        "Developed various Python and VBA scripts for automating accounting processes and calculations",
+        "Designed user interface for easy usability and user onboarding",
+        "Implemented Python program to interface with Outlook API for automated file downloading and decryption",
+        "Implemented VBA scripts for excel manipulations including custom cross-file data extraction, data validation"
+      ]
+    },
+    {
+      "name": "Mockaroo Automated Data Generation",
+      "subheader": "",
+      "description": "Script design in Ruby via online tool Mockaroo for generation of mock data",
+      "icon": "",
+      "link": "",
+      "bulletpoints": [
+        "Created outline for unique key generation for complex data",
+        "Ensure data continuity across different database tables via sequential table generation to overcome cross table reference limitations"
+      ]
+    }
+  ]
 }
