@@ -28,6 +28,18 @@
       ]
     },
     {
+      "name": "Visual JSON",
+      "subheader": "",
+      "description": "Visualization tool for complex JSON data.",
+      "icon": "",
+      "link": "https://github.com/kk-min/visual-json",
+      "bulletpoints": [
+        "Designed and developed a utility tool with React and Typescript to visualize JSON data in a tree structure",
+        "Implemented level by level rendering via Breath-first search",
+        "Implemented show/hide functionality for individual tree nodes via state management"
+      ]
+    },
+    {
       "name": "Firestore Updater",
       "subheader": "",
       "description": "Firebase utility tool for quick visualization and updating of a Firestore database.",
