@@ -1,15 +1,14 @@
-import React, { SetStateAction } from "react";
 import "../css/Tabs.css";
 import kkminlogo_light from "../assets/kkminlogo_light.png";
-import { useTabStore } from "../data/Store";
+import { useTabStore, TabState } from "../data/Store";
 
 export interface PropTypes {
 	tabNames: string[];
 }
 
 export default function TabHeaders(props: PropTypes) {
-	const activeTab = useTabStore((state: any) => state.activeTab);
-	const setActiveTab = useTabStore((state: any) => state.setActiveTab);
+	const activeTab = useTabStore((state: TabState) => state.activeTab);
+	const setActiveTab = useTabStore((state: TabState) => state.setActiveTab);
 	// onClick function for when a tab is clicked:
 	const tabClickHandler = (tabname: string) => {
 		if (tabname === activeTab) {
