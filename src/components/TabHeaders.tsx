@@ -11,7 +11,7 @@ export default function TabHeaders(props: PropTypes) {
 	const activeTab = useTabStore((state: any) => state.activeTab);
 	const setActiveTab = useTabStore((state: any) => state.setActiveTab);
 	// onClick function for when a tab is clicked:
-	const tabClickHandler = (event: React.MouseEvent, tabname: string) => {
+	const tabClickHandler = (tabname: string) => {
 		if (tabname === activeTab) {
 			// Tab is already active
 			return;
@@ -33,7 +33,7 @@ export default function TabHeaders(props: PropTypes) {
 							? () => {
 								window.open("https://kkmin.vercel.app", "_blank");
 							}
-							: (event) => tabClickHandler(event, name)
+							: () => tabClickHandler(name)
 					}
 				>
 					{name}
