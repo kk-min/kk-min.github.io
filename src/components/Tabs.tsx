@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import TabContent from './TabContent';
 import TabHeaders from './TabHeaders';
+import { useTabStore } from '../data/Store';
 
 const tab_names = ['About Me', 'Projects', 'Contact', 'Blog'];
 
 export default function Tabs() {
-	const [activeTab, setActiveTab] = useState(tab_names[0]);
+	const activeTab = useTabStore((state: any) => state.activeTab);
+	const setActiveTab = useTabStore((state: any) => state.setActiveTab);
 
 	return (
 		<div className='tabs-container'>
