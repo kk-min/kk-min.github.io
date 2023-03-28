@@ -1,22 +1,23 @@
 import React, { SetStateAction } from "react";
 import "../css/Tabs.css";
 import kkminlogo_light from "../assets/kkminlogo_light.png";
+import { useTabStore } from "../data/Store";
 
 export interface PropTypes {
 	tabNames: string[];
-	activeTab: string;
-	setActiveTab: React.Dispatch<SetStateAction<string>>;
 }
 
 export default function TabHeaders(props: PropTypes) {
+	const activeTab = useTabStore((state: any) => state.activeTab);
+	const setActiveTab = useTabStore((state: any) => state.setActiveTab);
 	// onClick function for when a tab is clicked:
 	const tabClickHandler = (event: React.MouseEvent, tabname: string) => {
-		if (tabname === props.activeTab) {
+		if (tabname === activeTab) {
 			// Tab is already active
 			return;
 		}
 
-		props.setActiveTab(tabname);
+		setActiveTab(tabname);
 		window.scroll(0, 0);
 	};
 
@@ -26,7 +27,7 @@ export default function TabHeaders(props: PropTypes) {
 				<button
 					id={name}
 					key={name}
-					className={name === props.activeTab ? "tabheaderactive" : "tabheader"}
+					className={name === activeTab ? "tabheaderactive" : "tabheader"}
 					onClick={
 						name === "Blog"
 							? () => {

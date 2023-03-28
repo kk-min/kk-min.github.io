@@ -13,8 +13,6 @@ export default function Tabs() {
 		<div className='tabs-container'>
 			<TabHeaders
 				tabNames={tab_names.map((site_name) => site_name)}
-				activeTab={activeTab}
-				setActiveTab={setActiveTab}
 			/>
 			<TabContent
 				loading={false}
