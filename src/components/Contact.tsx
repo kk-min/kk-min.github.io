@@ -13,26 +13,10 @@ export default function Contact() {
 	const setLockStatus = usePuzzleStore((state) => state.setLockStatus);
 	const setInput = usePuzzleStore((state) => state.setInput);
 	const setIsAnimating = usePuzzleStore((state) => state.setIsAnimating);
+	const setFirstRender = usePuzzleStore((state) => state.setFirstRender);
 
 	useEffect(() => {
-		const lockElement = document.getElementById('lock');
-		const unlockerElement = document.getElementById('unlocker');
-		const contactElement = document.getElementById('contact-card');
-
-		if (lockStatus === 'open') {
-			setTimeout(() => {
-				if (lockElement) {
-					lockElement.style.display = 'none';
-				}
-				if (unlockerElement) {
-					unlockerElement.style.display = 'none';
-				}
-				if (contactElement) {
-					contactElement.className = 'contact-info';
-				}
-			}, 2000);
-			return;
-		} else {
+		if (isAnimating) {
 			setTimeout(() => {
 				setIsAnimating(false);
 			}, 5000);
@@ -53,6 +37,7 @@ export default function Contact() {
 		setInput('');
 		setLockStatus('default');
 		setIsAnimating(true);
+		setFirstRender(true);
 
 		setTimeout(() => {
 			setIsAnimating(false);
@@ -76,7 +61,7 @@ export default function Contact() {
 			<Unlocker
 			/>
 			{lockStatus === 'open' ? (
-				<div className='contact-info-invisible' id='contact-card'>
+				<div className={lockStatus === 'open' ? 'contact-info' : 'contact-info-invisible'} id='contact-card'>
 					<ProjectItem
 						projectTitle='Min Kabar Kyaw'
 						projectDescription=''
@@ -105,7 +90,8 @@ export default function Contact() {
 						]}
 					/>
 				</div>
-			) : null}
-		</div>
+			) : null
+			}
+		</div >
 	);
 }
