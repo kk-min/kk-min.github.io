@@ -2,16 +2,18 @@ import React, { useState, useEffect, useMemo } from 'react';
 import padlock_default from '../assets/padlock_default.png';
 import padlock_open from '../assets/padlock_open.png';
 import padlock_error from '../assets/padlock_error.png';
+import { usePuzzleStore } from '../data/Store';
 
-export interface PropTypes {
-	secret: string;
-	input: string;
-	lockState: string;
-	setLockState: React.Dispatch<React.SetStateAction<string>>;
-}
 
-export default function Lock(props: PropTypes) {
-	const [firstRender, setFirstRender] = useState(true);
+export default function Lock() {
+	const firstRender = usePuzzleStore((state) => state.firstRender)
+	const lockStatus = usePuzzleStore((state) => state.lockStatus)
+
+	if (firstRender) {
+		setTimeout(() => {
+			usePuzzleStore.setState({ firstRender: false })
+		}, 300)
+	}
 
 	const defaultLock = useMemo(() => {
 		return padlock_default;
@@ -25,32 +27,15 @@ export default function Lock(props: PropTypes) {
 		return padlock_error;
 	}, []);
 
-	useEffect(() => {
-		setTimeout(() => {
-			setFirstRender((prev) => false);
-		}, 1000);
-	}, []);
-
-	useEffect(() => {
-		setFirstRender((prev) => true);
-	}, [props.lockState]);
-
 	const onClickHandler = () => {
 		const lockElement = document.getElementById('lock-image');
 		if (lockElement) {
 			// Input not completely filled
-			if (props.input.length < props.secret.length) {
+			if (lockStatus === 'default') {
 				lockElement.classList.add('shaking');
 				setTimeout(() => {
 					lockElement.classList.remove('shaking');
 				}, 300);
-			} else if (props.input !== props.secret) {
-				// Input is incorrect
-				lockElement.className = 'lock-failed';
-				props.setLockState('error');
-			} else {
-				// Input completely filled and correct
-				props.setLockState('open');
 			}
 		}
 	};
@@ -59,7 +44,7 @@ export default function Lock(props: PropTypes) {
 		<div
 			id='lock'
 			className={
-				props.lockState === 'open'
+				lockStatus === 'open'
 					? 'lock-container-exit'
 					: 'lock-container'
 			}
@@ -68,20 +53,20 @@ export default function Lock(props: PropTypes) {
 				id='lock-image'
 				className={
 					'lock' +
-					(props.lockState === 'open'
+					(lockStatus === 'open'
 						? '-exit'
-						: props.lockState === 'error'
-						? '-failed'
-						: firstRender
-						? ' initial'
-						: '')
+						: lockStatus === 'error'
+							? '-failed'
+							: firstRender
+								? ' initial'
+								: '')
 				}
 				src={
-					props.lockState === 'default'
+					lockStatus === 'default'
 						? defaultLock
-						: props.lockState === 'open'
-						? openLock
-						: errorLock
+						: lockStatus === 'open'
+							? openLock
+							: errorLock
 				}
 				onClick={onClickHandler}
 				alt='lock'
