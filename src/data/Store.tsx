@@ -9,6 +9,7 @@ export interface PuzzleState {
 	input: string
 	lockStatus: string
 	isAnimating: boolean
+	firstRender: boolean
 	resetSecret: () => void
 	setInput: (input: string) => void
 	setIsAnimating: (isAnimating: boolean) => void
@@ -24,9 +25,11 @@ export const usePuzzleStore = create<PuzzleState>((set, get) => ({
 	input: "",
 	lockStatus: "default",
 	isAnimating: true,
+	firstRender: true,
 	resetSecret: () => set({ secret: getRandomSecret(randomizerArray) }),
 	setInput: (input: string) => set({ input, lockStatus: input === get().secret ? "open" : input.length === 4 ? "error" : "default" }),
 	setIsAnimating: (isAnimating: boolean) => set({ isAnimating }),
+	setFirstRender: (firstRender: boolean) => set({ firstRender }),
 }))
 
 const randomizerArray = ['1', '2', '3', '4'];
