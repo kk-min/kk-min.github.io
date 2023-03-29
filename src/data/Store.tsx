@@ -15,6 +15,7 @@ export interface PuzzleState {
 	setLockStatus: (lockStatus: string) => void
 	setInput: (input: string) => void
 	setIsAnimating: (isAnimating: boolean) => void
+	setFirstRender: (firstRender: boolean) => void
 }
 
 const randomizerArray = ['1', '2', '3', '4'];
