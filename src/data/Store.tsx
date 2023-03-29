@@ -12,9 +12,23 @@ export interface PuzzleState {
 	isAnimating: boolean
 	firstRender: boolean
 	resetSecret: () => void
+	setLockStatus: (lockStatus: string) => void
 	setInput: (input: string) => void
 	setIsAnimating: (isAnimating: boolean) => void
 }
+
+const randomizerArray = ['1', '2', '3', '4'];
+const getRandomSecret = (sourceArray: string[]) => {
+	let secret: string = '';
+	let tempArray = [...sourceArray];
+	while (tempArray.length > 0) {
+		let index = Math.floor(Math.random() * tempArray.length);
+		let randomItem = tempArray[index];
+		secret += randomItem;
+		tempArray.splice(index, 1); // Remove selected item from array
+	}
+	return secret;
+};
 
 export const useTabStore = create<TabState>((set) => ({
 	activeTab: "About Me",
@@ -33,16 +47,3 @@ export const usePuzzleStore = create<PuzzleState>((set, get) => ({
 	setIsAnimating: (isAnimating: boolean) => set({ isAnimating }),
 	setFirstRender: (firstRender: boolean) => set({ firstRender }),
 }))
-
-const randomizerArray = ['1', '2', '3', '4'];
-const getRandomSecret = (sourceArray: string[]) => {
-	let secret: string = '';
-	let tempArray = [...sourceArray];
-	while (tempArray.length > 0) {
-		let index = Math.floor(Math.random() * tempArray.length);
-		let randomItem = tempArray[index];
-		secret += randomItem;
-		tempArray.splice(index, 1); // Remove selected item from array
-	}
-	return secret;
-};
