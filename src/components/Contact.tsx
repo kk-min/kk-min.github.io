@@ -16,6 +16,12 @@ export default function Contact() {
 	const setFirstRender = usePuzzleStore((state) => state.setFirstRender);
 
 	useEffect(() => {
+		document.addEventListener('animationend', function(e: any) {
+			if (e && e.animationName == 'fade-out') {
+				e.target.style.display = 'none';
+			}
+		});
+
 		if (isAnimating) {
 			setTimeout(() => {
 				setIsAnimating(false);

@@ -535,6 +535,7 @@ li::marker {
 		opacity: 1;
 	}
 	100% {
+		visibility: hidden;
 		opacity: 0;
 	}
 }
@@ -558,14 +559,16 @@ li::marker {
 .contact-info {
 	width: fit-content;
 	align-self: center;
-	margin-top: 5vh;
+	margin-top: 10vh;
 	animation-name: fade-in;
+	animation-delay: 2s;
 	opacity: 0;
 	animation-duration: 1.5s;
 	animation-fill-mode: forwards;
 }
 
 .contact-info-invisible {
+	visibility: none;
 	display: none;
 }
 
