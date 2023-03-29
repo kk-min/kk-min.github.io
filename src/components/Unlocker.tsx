@@ -44,12 +44,13 @@ export default function Unlocker() {
 	const setInput = usePuzzleStore((state) => state.setInput);
 
 	useEffect(() => {
-		if (lockStatus === "open" || lockStatus === "error") {
+		if (lockStatus === 'error') {
 			fillUnlockers();
-			return;
 		}
-		animateAnswer(secret);
-	}, [secret, lockStatus]);
+		if (lockStatus === "default" && input.length < 4) {
+			animateAnswer(secret);
+		}
+	}, [secret]);
 
 	const onClickHandler = (id: string) => {
 		const unlockerElement = document.getElementById("unlocker" + id);

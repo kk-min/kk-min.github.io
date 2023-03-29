@@ -10,6 +10,7 @@ export default function Lock() {
 	const lockStatus = usePuzzleStore((state) => state.lockStatus)
 
 	if (firstRender) {
+		document.getElementById('lock')?.style.removeProperty('display')
 		setTimeout(() => {
 			usePuzzleStore.setState({ firstRender: false })
 		}, 300)
