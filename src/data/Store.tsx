@@ -4,6 +4,7 @@ export interface TabState {
 	activeTab: string
 	setActiveTab: (tab: string) => void
 }
+
 export interface PuzzleState {
 	secret: string
 	input: string
@@ -27,6 +28,7 @@ export const usePuzzleStore = create<PuzzleState>((set, get) => ({
 	isAnimating: true,
 	firstRender: true,
 	resetSecret: () => set({ secret: getRandomSecret(randomizerArray) }),
+	setLockStatus: (lockStatus: string) => set({ lockStatus }),
 	setInput: (input: string) => set({ input, lockStatus: input === get().secret ? "open" : input.length === 4 ? "error" : "default" }),
 	setIsAnimating: (isAnimating: boolean) => set({ isAnimating }),
 	setFirstRender: (firstRender: boolean) => set({ firstRender }),
