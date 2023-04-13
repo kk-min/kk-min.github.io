@@ -1,5 +1,5 @@
 # KK Min
-_Copyright © 2023 kk-min  
+_Copyright © 2023 kk-min_
 
 Contains the source code for https://kk-min.github.io/ made with React and Typescript.
 
