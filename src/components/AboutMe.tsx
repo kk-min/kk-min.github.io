@@ -37,7 +37,7 @@ export default function AboutMe(props: PropTypes) {
 				</h1>
 
 				<button className='down-button' onClick={scrollHandler}>
-					<img className='arrow' src={down_arrow} />
+					<img className='arrow' src={down_arrow} alt="Arrow pointing down" />
 				</button>
 			</div>
 			<div className='about-me-content' id='about-me-content'>
