@@ -99,7 +99,8 @@
       "link": "https://kkmin.vercel.app",
       "bulletpoints": [
         "Developed a full stack web application with NextJs, Javascript and CSS",
-        "Implemented MDX Compiler for seamless integration of Markdown and JSX for blog posts"
+        "Implemented MDX Compiler for seamless integration of Markdown and JSX for blog posts",
+		"Designed and implemented newsletter mechanism using AWS DynamoDB and Lambda with SMTP2Go API"
       ]
     },
     {
