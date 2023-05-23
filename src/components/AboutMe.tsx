@@ -44,29 +44,27 @@ export default function AboutMe(props: PropTypes) {
 				Creating things has always been a big part of my life. When I
 				was young, I enjoyed building my own lego structures to stories
 				during playtime. When I was in highschool, I was deeply enamored
-				by music and the creative process behind composition, and the
+				by music and the creative process behind musical composition, and the
 				way{' '}
 				<a
 					href='https://en.wikipedia.org/wiki/Digital_audio_workstation'
 					target='_blank'
 					rel='noopener noreferrer'
 				>
-					software augments it.
+					software transformed it.
 				</a>{' '}
 				This eventually led me to study Computer Science and learn
 				software development. Now, I aspire to create
 				technology/software to make a difference in the world.
 				<br />
 				<br />
-				I have experience in both Frontend (Reactjs,
-				Javascript/Typescript, CSS) and Backend (Anroid development,
-				Java, Kotlin, C/C++) experience as well as scripting (Python,
-				VBA); see Projects for more details. I'm also always looking out
+				I have experience in both Frontend (Reactjs/Nextjs, Svelte/SvelteKit,
+				Javascript/Typescript, CSS) and Backend (Go,
+				Java, Kotlin, C/C++) experience; see Projects for more details. I'm also always looking out
 				to learn and explore new technologies!
 				<br />
 				<br />
-				If you have an idea for which you think we can collaborate and
-				work together, feel free to reach out to me via the Contact tab!
+				If you have an idea or are working on something and think we might be a good fit, feel free to reach out to me via the Contact tab!
 				<br />
 				<br />
 			</div>
